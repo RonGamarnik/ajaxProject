@@ -479,54 +479,6 @@
       "categories": "Authors",
       "isbn": "SRLF:D0007615933",
       "numCopies": 5
-    },
-    {
-      "id": "79f4",
-      "bookName": "Harry Potter and the Sorcerer's Stone",
-      "authorsName": "J.K. Rowling",
-      "numPages": 311,
-      "shortDescription": "Turning the envelope over, his hand trembling, Harry saw a purple wax seal bearing a coat of arms; a lion, an eagle, a badger and a snake surrounding a large letter 'H'. Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin! Having become classics of our time, the Harry Potter eBooks never fail to bring comfort and escapism. With their message of hope, belonging and the enduring power of truth and love, the story of the Boy Who Lived continues to delight generations of new readers.",
-      "imageSmall": "http://books.google.com/books/content?id=wrOQLV6xB-wC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=wrOQLV6xB-wC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "categories": "Juvenile Fiction",
-      "isbn": "9781781100486, 1781100489",
-      "numCopies": 5
-    },
-    {
-      "id": "03da",
-      "bookName": "War and Peace",
-      "authorsName": "graf Leo Tolstoy",
-      "numPages": 768,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=jVMEAAAAYAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=jVMEAAAAYAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "Napoleonic Wars, 1800-1815",
-      "isbn": "HARVARD:32044018750919",
-      "numCopies": 5
-    },
-    {
-      "id": "ed41",
-      "bookName": "The Great Gatsby",
-      "authorsName": "F. Scott Fitzgerald",
-      "numPages": 182,
-      "shortDescription": "**The twentieth-century masterpiece, the authoritative new edition** With a new foreword by Jesmyn Ward, author of the Women's Prize-shortlisted Sing, Unburied, Sing ‘There was music from my neighbour’s house through the summer nights. In his blue gardens men and girls came and went like moths among the whisperings and the champagne and the stars.’ Enigmatic, intriguing and fabulously wealthy, Jay Gatsby throws lavish parties at his West Egg mansion to impress Daisy Buchanan, the object of his obsession, now married to bullish Tom Buchanan. Over a Long Island summer, his neighbour Nick Carraway, a writer and a cousin to Daisy, looks on as Gatsby and Daisy’s affair deepens. Tragedy looms in F. Scott Fitzgerald’s masterpiece third novel, frequently named among the best novels of the twentieth century. Praise for The Great Gatsby: ‘A classic, perhaps the supreme American novel’ Sunday Times ‘More than an American classic; it’s become a defining document of the national psyche, a creation myth, the Rosetta Stone of the American dream’ Guardian ‘F. Scott Fitzgerald was better than he knew, for in fact and in the literary sense he invented a generation’ New York Times ‘An unquiet masterpiece whose mystery never fails to exert its power’ Robert McCrum, Observer, ‘The 100 Best Novels in English’",
-      "imageSmall": "http://books.google.com/books/content?id=iWA-DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=iWA-DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "Fiction",
-      "isbn": "9781471173943, 1471173941",
-      "numCopies": 5
-    },
-    {
-      "id": "5fe6",
-      "bookName": "The Great Gatsby",
-      "authorsName": "F. Scott Fitzgerald",
-      "numPages": 182,
-      "shortDescription": "**The twentieth-century masterpiece, the authoritative new edition** With a new foreword by Jesmyn Ward, author of the Women's Prize-shortlisted Sing, Unburied, Sing ‘There was music from my neighbour’s house through the summer nights. In his blue gardens men and girls came and went like moths among the whisperings and the champagne and the stars.’ Enigmatic, intriguing and fabulously wealthy, Jay Gatsby throws lavish parties at his West Egg mansion to impress Daisy Buchanan, the object of his obsession, now married to bullish Tom Buchanan. Over a Long Island summer, his neighbour Nick Carraway, a writer and a cousin to Daisy, looks on as Gatsby and Daisy’s affair deepens. Tragedy looms in F. Scott Fitzgerald’s masterpiece third novel, frequently named among the best novels of the twentieth century. Praise for The Great Gatsby: ‘A classic, perhaps the supreme American novel’ Sunday Times ‘More than an American classic; it’s become a defining document of the national psyche, a creation myth, the Rosetta Stone of the American dream’ Guardian ‘F. Scott Fitzgerald was better than he knew, for in fact and in the literary sense he invented a generation’ New York Times ‘An unquiet masterpiece whose mystery never fails to exert its power’ Robert McCrum, Observer, ‘The 100 Best Novels in English’",
-      "imageSmall": "http://books.google.com/books/content?id=iWA-DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=iWA-DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "Fiction",
-      "isbn": "9781471173943, 1471173941",
-      "numCopies": 5
     }
   ],
   "history": [],

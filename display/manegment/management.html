@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="managementStyle.css" />
     <title>Welcome to open library</title>
   </head>
   <body>
@@ -13,22 +13,23 @@
       </div>
       <nav>
         <ul>
-          <li><a href="index.html">HOME</a></li>
+          <li><a href="/display/index.html">HOME</a></li>
           <li><a href="favorites.html">FAVORITES</a></li>
           <li><a href="history.html">HISTORY</a></li>
-          <li><a href="manegment/management.html">INVENTORY MANAGEMENT</a></li>
+          <li><a href="management.html">INVENTORY MANAGEMENT</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <div class="search">
         <input id="book-search" type="search" placeholder="Enter Book name" />
-        <button id="fetch-books-button">Search</button>
+        <button id="fetch-books-button" type="submit">Search</button>
       </div>
-      <div id="books" class="showAllBooks"></div>
-      <div class="ChosenBook"></div>
+      <div id="books"></div>
+      <!-- This is where the fetched books will be displayed -->
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

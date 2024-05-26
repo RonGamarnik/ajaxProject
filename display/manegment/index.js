@@ -36,8 +36,8 @@ async function addBookToLocalServer(book) {
       : "No categories available",
     isbn: book.volumeInfo.industryIdentifiers
       ? book.volumeInfo.industryIdentifiers
-          .map((id) => id.identifier)
-          .join(", ")
+        .map((id) => id.identifier)
+        .join(", ")
       : "No ISBN available",
     numCopies: 5, // Default number of copies
   };
@@ -57,22 +57,30 @@ async function displayBooks(books) {
   const booksContainer = document.getElementById("books");
   booksContainer.innerHTML = ""; // Clear previous results
 
+  const existingBooks = await axios.get('http://localhost:8001/books');
+  const existingTitles = existingBooks.data.map(b => b.bookName);
+
   books.forEach((book, index) => {
-    const bookElement = document.createElement("div");
-    bookElement.classList.add("book");
-
     const title = book.volumeInfo.title || "No title available";
-    const authors = book.volumeInfo.authors ? book.volumeInfo.authors.join(", ") : "No authors available";
-    const description = book.volumeInfo.description || "No description available";
+    if (!existingTitles.includes(title)) {
+      const bookElement = document.createElement("div");
+      bookElement.classList.add("book");
 
-    bookElement.innerHTML = `
-      <h3>${title}</h3>
-      <p><strong>Authors:</strong> ${authors}</p>
-      <p><strong>Description:</strong> ${description}</p>
-      <button onclick="addBookToLocalServer(${index})">Add to Local Library</button>
-    `;
+      const authors = book.volumeInfo.authors ? book.volumeInfo.authors.join(", ") : "No authors available";
 
-    booksContainer.appendChild(bookElement);
+      bookElement.innerHTML = `
+        <h3>${title}</h3>
+        <p><strong>Authors:</strong> ${authors}</p>
+        <button id="add-book-${index}" class="add-book-button">Add to Local Library</button>
+      `;
+
+      booksContainer.appendChild(bookElement);
+
+      // Add event listener for the button
+      document.getElementById(`add-book-${index}`).addEventListener("click", () => {
+        addBookToLocalServer(book);
+      });
+    }
   });
 }
 
@@ -87,16 +95,3 @@ async function fetchAndDisplayBooks() {
 }
 
 document.getElementById("fetch-books-button").addEventListener("click", fetchAndDisplayBooks);
-
-// Add book function needs to be adjusted to work with the new display method
-window.addBookToLocalServer = async function(bookIndex) {
-  const searchBookValue = document.getElementById("book-search").value;
-  const books = await fetchBooksFromGoogle(searchBookValue);
-
-  if (books.length > 0) {
-    const selectedBook = books[bookIndex];
-    await addBookToLocalServer(selectedBook);
-  } else {
-    console.log("No books found for the given query.");
-  }
-}

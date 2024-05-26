@@ -83,3 +83,14 @@ main{
 .search{
     display: flex;
 }
+.book{
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 20px;
+
+}
+.book:hover{
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}

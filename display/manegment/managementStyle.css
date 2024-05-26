@@ -16,7 +16,8 @@ body {
 header {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 20px 0;
+    display: flex;
 }
 
 .logo {
@@ -57,6 +58,7 @@ main {
 
 .search {
     margin-bottom: 20px;
+    height: 3em!important;
 }
 
 .search input[type="search"] {
@@ -69,12 +71,24 @@ main {
 }
 
 /* SearchResult styles */
-.searchResult {
+#books {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 100%;
+}
+.book{
+    border: 2px solid salmon;
+    border-radius: 25px;
+    padding: 1em;
+    margin-bottom: 3em;
+}
+.book:hover{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 main{
     display: flex;

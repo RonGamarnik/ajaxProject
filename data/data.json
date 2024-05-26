@@ -479,6 +479,54 @@
       "categories": "Authors",
       "isbn": "SRLF:D0007615933",
       "numCopies": 5
+    },
+    {
+      "id": "79f4",
+      "bookName": "Harry Potter and the Sorcerer's Stone",
+      "authorsName": "J.K. Rowling",
+      "numPages": 311,
+      "shortDescription": "Turning the envelope over, his hand trembling, Harry saw a purple wax seal bearing a coat of arms; a lion, an eagle, a badger and a snake surrounding a large letter 'H'. Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin! Having become classics of our time, the Harry Potter eBooks never fail to bring comfort and escapism. With their message of hope, belonging and the enduring power of truth and love, the story of the Boy Who Lived continues to delight generations of new readers.",
+      "imageSmall": "http://books.google.com/books/content?id=wrOQLV6xB-wC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      "imageLarge": "http://books.google.com/books/content?id=wrOQLV6xB-wC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "categories": "Juvenile Fiction",
+      "isbn": "9781781100486, 1781100489",
+      "numCopies": 5
+    },
+    {
+      "id": "03da",
+      "bookName": "War and Peace",
+      "authorsName": "graf Leo Tolstoy",
+      "numPages": 768,
+      "shortDescription": "No description available",
+      "imageSmall": "http://books.google.com/books/content?id=jVMEAAAAYAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "imageLarge": "http://books.google.com/books/content?id=jVMEAAAAYAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "categories": "Napoleonic Wars, 1800-1815",
+      "isbn": "HARVARD:32044018750919",
+      "numCopies": 5
+    },
+    {
+      "id": "ed41",
+      "bookName": "The Great Gatsby",
+      "authorsName": "F. Scott Fitzgerald",
+      "numPages": 182,
+      "shortDescription": "**The twentieth-century masterpiece, the authoritative new edition** With a new foreword by Jesmyn Ward, author of the Women's Prize-shortlisted Sing, Unburied, Sing ‘There was music from my neighbour’s house through the summer nights. In his blue gardens men and girls came and went like moths among the whisperings and the champagne and the stars.’ Enigmatic, intriguing and fabulously wealthy, Jay Gatsby throws lavish parties at his West Egg mansion to impress Daisy Buchanan, the object of his obsession, now married to bullish Tom Buchanan. Over a Long Island summer, his neighbour Nick Carraway, a writer and a cousin to Daisy, looks on as Gatsby and Daisy’s affair deepens. Tragedy looms in F. Scott Fitzgerald’s masterpiece third novel, frequently named among the best novels of the twentieth century. Praise for The Great Gatsby: ‘A classic, perhaps the supreme American novel’ Sunday Times ‘More than an American classic; it’s become a defining document of the national psyche, a creation myth, the Rosetta Stone of the American dream’ Guardian ‘F. Scott Fitzgerald was better than he knew, for in fact and in the literary sense he invented a generation’ New York Times ‘An unquiet masterpiece whose mystery never fails to exert its power’ Robert McCrum, Observer, ‘The 100 Best Novels in English’",
+      "imageSmall": "http://books.google.com/books/content?id=iWA-DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "imageLarge": "http://books.google.com/books/content?id=iWA-DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "categories": "Fiction",
+      "isbn": "9781471173943, 1471173941",
+      "numCopies": 5
+    },
+    {
+      "id": "bfc6",
+      "bookName": "Harry's Apology",
+      "authorsName": "David Martin Anderson",
+      "numPages": 216,
+      "shortDescription": "Harry Kaplonsky is a veteran of World War II, a survivor of the USS Houston's sinking in the South Pacific, and one of the few men still alive who can recount in detail the one thousand and fifteen days of captivity in the notorious Omori POW prison south of Tokyo. It is there Harry was tortured and beaten and witnessed countless atrocities including the murder of his best friend, Curly. Only problem, Harry can't seem to erase the event from his memories, and he sure can't seem to forgive his captors for the barbaric things which took place during his imprisonment. Now, sixty years later, he's angry and on a mission to sue the Obuchi government for an apology. Since his liberation in August, 1945, Harry's life has been spiraling downward, highlighted by one failed relationship after another, five marriages in total, all marred by battering and cruelty. For Harry the suit is more than a legal means to even the score, it is the last opportunity to lay blame for his own failings. Only days from death, Harry's litigation appears to be lapsing with his demise unless he can convince one of the other four Omori survivors to collaborate in the litigation. Unfortunately, all four despise him and won't enjoin the suit. Furthermore, the U.S. government is siding with the Japanese in hopes of winning trade concessions, and vows to fight Harry to the end. The government's legal team is led by none other than Harry's bastard son, Harold, turning the legal battle into a nasty family affair. All appears to be going adversely against the old veteran. Enter Tinker, an aspiring author in the throws of a literary dry spell. She is searching for the one great story (oddly, a non-fiction piece) to turn her fledgling career around. It is the television interview with Harry by Larry King, however, that motivates her into journeying to Texas for the annual USS Houston survivors' reunion and a shot at the rights to Harry's story. A victim of childhood physical abuse herself, Tinker's past soon becomes intertwined with Harry's, the battering both experienced providing common ground. During the course of the interview, Tinker discovers the dark secrets surrounding Harry and his seeming culpability in the deaths of five crewmates. It is this connection which has created a schism between Harry and the last of the Omori survivors. In the end, Tinker must not only reunite the five Omori brothers, she must also come to terms with her own past and forgive her estranged father.",
+      "imageSmall": "http://books.google.com/books/content?id=KAXfDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "imageLarge": "http://books.google.com/books/content?id=KAXfDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "categories": "Fiction",
+      "isbn": "9781892617156, 1892617153",
+      "numCopies": 5
     }
   ],
   "history": [],

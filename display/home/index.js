@@ -1,102 +1,98 @@
-const API_KEY = "AIzaSyAG2FJV_karWD_hHLYtTbCnAFj79VFbK1g";
-const maxResults = 40; // Max results per request (Google Books API limit)
-let startIndex = 0; // Start index for pagination
+const urlBooks = "http://localhost:8001/books";
+const showAllBooksDisplay = document.querySelector(".showAllBooks");
+const chosenBookDisplay = document.querySelector(".chosenBook");
 
-async function fetchBooksFromGoogle(query) {
-  const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${API_KEY}&startIndex=${startIndex}&maxResults=${maxResults}`;
-  try {
-    const response = await axios.get(url);
-    return response.data.items || [];
-  } catch (error) {
-    console.error(
-      "Error fetching books from Google Books API:",
-      error.response ? error.response.data : error.message
-    );
-    return [];
+let page = 1;
+let allBooks = []; // Store all books for easy access
+
+function showAllBooks(page) {
+  axios
+    .get(`${urlBooks}?_page=${page}`)
+    .then((response) => {
+      allBooks = response.data.data; // Store the fetched books
+
+      // Clear previous results
+      showAllBooksDisplay.innerHTML = "";
+
+      allBooks.forEach((book) => {
+        const bookElement = document.createElement("div");
+        bookElement.classList.add("book");
+
+        // Correctly access book properties
+        const imgSrc = book.imageSmall ? book.imageSmall : "default-image.jpg";
+        const bookName = book.bookName ? book.bookName : "No title available";
+        const authorsName = book.authorsName ? book.authorsName : "No authors available";
+
+        bookElement.innerHTML = `
+          <img src="${imgSrc}" alt="Book Image"/>
+          <p>${bookName}</p>
+          <p>${authorsName}</p>
+        `;
+
+        // Correctly add the event listener
+        bookElement.addEventListener("click", () => chosenBook(book));
+
+        showAllBooksDisplay.appendChild(bookElement);
+      });
+    })
+    .catch((error) => {
+      console.error("Error fetching books:", error);
+    });
+}
+
+function chosenBook(book) {
+  chosenBookDisplay.innerHTML = `
+    <h3>${book.bookName}</h3>
+    <img src="${book.imageLarge}" alt="Book Image" />
+    <p>Author: ${book.authorsName}</p>
+    <p>Number of pages: ${book.numPages}</p>
+    <p>Description: ${book.shortDescription}</p>
+    <p>Categories: ${book.categories}</p>
+    <p>Number of copies: ${book.numCopies}</p>
+    <p>ISBN: ${book.isbn}</p>
+    <button onclick="addCopies(${book.id})">+</button>
+    <button onclick="removeCopies(${book.id})">-</button>
+  `;
+}
+
+function addCopies(bookId) {
+  const book = allBooks.find(b => b.id === bookId);
+  if (book) {
+    book.numCopies += 1;
+    updateBook(book);
+    chosenBook(book);
   }
 }
 
-async function addBookToLocalServer(book) {
-  const urlBooks = `http://localhost:8001/books`;
-  const newBook = {
-    bookName: book.volumeInfo.title || "No title available",
-    authorsName: book.volumeInfo.authors
-      ? book.volumeInfo.authors.join(", ")
-      : "No authors available",
-    numPages: book.volumeInfo.pageCount || "No page count available",
-    shortDescription: book.volumeInfo.description || "No description available",
-    imageSmall: book.volumeInfo.imageLinks
-      ? book.volumeInfo.imageLinks.smallThumbnail
-      : "No image available",
-    imageLarge: book.volumeInfo.imageLinks
-      ? book.volumeInfo.imageLinks.thumbnail
-      : "No image available",
-    categories: book.volumeInfo.categories
-      ? book.volumeInfo.categories.join(", ")
-      : "No categories available",
-    isbn: book.volumeInfo.industryIdentifiers
-      ? book.volumeInfo.industryIdentifiers
-          .map((id) => id.identifier)
-          .join(", ")
-      : "No ISBN available",
-    numCopies: 5, // Default number of copies
-  };
-
-  try {
-    const response = await axios.post(urlBooks, newBook);
-    console.log("Book added:", response.data);
-  } catch (error) {
-    console.error(
-      "Error adding book to local server:",
-      error.response ? error.response.data : error.message
-    );
+function removeCopies(bookId) {
+  const book = allBooks.find(b => b.id === bookId);
+  if (book && book.numCopies > 0) {
+    book.numCopies -= 1;
+    updateBook(book);
+    chosenBook(book);
   }
 }
 
-async function displayBooks(books) {
-  const booksContainer = document.getElementById("books");
-  booksContainer.innerHTML = ""; // Clear previous results
-
-  books.forEach((book, index) => {
-    const bookElement = document.createElement("div");
-    bookElement.classList.add("book");
-
-    const title = book.volumeInfo.title || "No title available";
-    const authors = book.volumeInfo.authors ? book.volumeInfo.authors.join(", ") : "No authors available";
-    const description = book.volumeInfo.description || "No description available";
-
-    bookElement.innerHTML = `
-      <h3>${title}</h3>
-      <p><strong>Authors:</strong> ${authors}</p>
-      <p><strong>Description:</strong> ${description}</p>
-      <button onclick="addBookToLocalServer(${index})">Add to Local Library</button>
-    `;
-
-    booksContainer.appendChild(bookElement);
-  });
+function updateBook(book) {
+  axios.patch(`${urlBooks}/${book.id}`, book)
+    .then(response => {
+      console.log('Book updated:', response.data);
+    })
+    .catch(error => {
+      console.error('Error updating book:', error);
+    });
 }
 
-async function fetchAndDisplayBooks() {
-  const searchBookValue = document.getElementById("book-search").value;
-  const books = await fetchBooksFromGoogle(searchBookValue);
-  if (books.length > 0) {
-    await displayBooks(books);
-  } else {
-    console.log("No books found for the given query.");
+function next() {
+  page += 1;
+  showAllBooks(page);
+}
+
+function previous() {
+  if (page > 1) {
+    page -= 1;
   }
+  showAllBooks(page);
 }
 
-document.getElementById("fetch-books-button").addEventListener("click", fetchAndDisplayBooks);
-
-// Add book function needs to be adjusted to work with the new display method
-window.addBookToLocalServer = async function(bookIndex) {
-  const searchBookValue = document.getElementById("book-search").value;
-  const books = await fetchBooksFromGoogle(searchBookValue);
-
-  if (books.length > 0) {
-    const selectedBook = books[bookIndex];
-    await addBookToLocalServer(selectedBook);
-  } else {
-    console.log("No books found for the given query.");
-  }
-}
+showAllBooks(page);

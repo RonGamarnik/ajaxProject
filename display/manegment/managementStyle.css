@@ -16,7 +16,7 @@ body {
 header {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px 0;
+    padding: 20px;
     display: flex;
 }
 
@@ -30,7 +30,9 @@ header {
     height: auto;
     margin-right: 20px;
 }
-
+nav{
+    padding-top: 0.35em;
+}
 nav ul {
     list-style-type: none;
 }

@@ -1,101 +1,213 @@
 /* Resetting default browser styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Setting up basic styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
 /* Header styles */
 header {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+  background-color: #cad4eeb1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-    width: 100px; /* Adjust as needed */
-    height: auto;
-    margin-right: 20px;
+  width: 100px; /* Adjust as needed */
+  height: auto;
+  margin-right: 20px;
 }
-
+nav {
+  padding-top: 0.35em;
+}
 nav ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 nav ul li {
-    display: inline-block;
-    margin-right: 20px;
+  display: inline-block;
+  margin-right: 20px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #007bff;
+  color: #0e3f72;
 }
 
 /* Main content styles */
 main {
-    padding: 20px;
+  padding: 20px;
 }
 
 .search {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .search input[type="search"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
 }
 
 /* SearchResult styles */
-.allBooksCard,.chosenBook {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 100%;
+.allBooksCard,
+.chosenBook {
+  background-color: #cad4eeb1;
+  border-radius: 10px;
+  box-shadow: 0 0.4em rgba(77, 75, 75, 0.1);
+  padding: 20px;
+  width: 40%;
 }
-.chosenBook{
-    position: sticky;
-    top: 1em;
-    height: fit-content;
+.allBooksCard {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
-main{
-    display: flex;
-    gap: 5em;
+.showAllBooks {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
-.search{
-    display: flex;
+.imgAndName {
+  width: 40%;
 }
-.book{
-    border: 2px solid black;
-    border-radius: 25px;
-    padding: 20px;
-
+.imgAndName #name {
+  font-family: "Vollkorn", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: #000000;
+  padding-bottom: 0.7em;
 }
-.book:hover{
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
+.chosenBook {
+  position: sticky;
+  top: 1em;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  background-color: #cad4eeb1;
+}
+.chosenBook p {
+  color: #272727;
+  font-family: "Cardo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.chosenBookData {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 0.5em;
+  padding-left: 1em;
+}
+.chosenBookData button {
+  background-color: #eee;
+  border: none;
+  padding: 0.6rem;
+  font-size: 1rem;
+  width: 7em;
+  border-radius: 1rem;
+  color: rgb(17, 12, 12);
+  box-shadow: 0 0.4rem #b5b1b1;
+  cursor: pointer;
+}
+.chosenBookData button:active {
+  color: white;
+  box-shadow: 0 0.2rem #5f5c5c;
+  transform: translateY(0.2rem);
+}
+.chosenBookData button:hover:not(:disabled) {
+  background: rgb(234, 157, 157);
+  color: black;
+  text-shadow: 0 0.1rem #ddd2d2;
+}
+.chosenBookData #plus:hover:not(:disabled) {
+  background: rgb(170, 244, 188);
+  color: black;
+  text-shadow: 0 0.1rem #ddd2d2;
+}
+.chosenBookData button:disabled {
+  cursor: auto;
+  color: grey;
+}
+main {
+  display: flex;
+  gap: 5em;
+}
+.search {
+  display: flex;
+}
+.book {
+  border-radius: 25px;
+  padding: 20px;
+  background-color: #fffefe;
+  box-shadow: 0 0.4rem #b5b1b1;
+}
+.book p {
+  width: 60%;
+  padding-block: 0.5em;
+  font-family: "Tinos", serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #333;
+}
+.book .bookName {
+  font-family: "Vollkorn", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: #050404;
+}
+.book:hover {
+  background-color: hsla(0, 100%, 100%, 0.475);
+  color: white;
+  cursor: pointer;
+}
+span {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #050404;
+}
+.paginateButtons {
+  display: flex;
+  align-items: center;
+  padding-top: 1em;
+  gap: 0.5em;
+  justify-content: center;
+}
+.paginateButtons button {
+  background-color: #eee;
+  border: none;
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  width: 5em;
+  border-radius: 1rem;
+  color: rgb(71, 67, 67);
+  box-shadow: 0 0.4rem #b5b1b1;
+  cursor: pointer;
+  font-family: "Aleo", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }

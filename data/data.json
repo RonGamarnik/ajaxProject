@@ -431,6 +431,42 @@
       "categories": "nj",
       "isbn": "ij",
       "numCopies": 8
+    },
+    {
+      "id": "1892",
+      "bookName": "The Electrical Engineer",
+      "authorsName": "No authors available",
+      "numPages": 632,
+      "shortDescription": "No description available",
+      "imageSmall": "http://books.google.com/books/content?id=frs5Cf0UiWoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "imageLarge": "http://books.google.com/books/content?id=frs5Cf0UiWoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "categories": "Electric engineering",
+      "isbn": "UOM:39015039706810",
+      "numCopies": 5
+    },
+    {
+      "id": "3c6c",
+      "bookName": "Il Profeta Isaia volgarizzato e commentato",
+      "authorsName": "Samuel Davide LUZZATTO",
+      "numPages": 656,
+      "shortDescription": "No description available",
+      "imageSmall": "http://books.google.com/books/content?id=ETau85lCggQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "imageLarge": "http://books.google.com/books/content?id=ETau85lCggQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "categories": "No categories available",
+      "isbn": "BDM:13020100005740",
+      "numCopies": 5
+    },
+    {
+      "id": "8bd3",
+      "bookName": "Igrot Shadal",
+      "authorsName": "Samuel David Luzzatto",
+      "numPages": 672,
+      "shortDescription": "No description available",
+      "imageSmall": "http://books.google.com/books/content?id=ivUyAQAAMAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "imageLarge": "http://books.google.com/books/content?id=ivUyAQAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "categories": "No categories available",
+      "isbn": "NWU:35556039691969",
+      "numCopies": 5
     }
   ],
   "history": [
@@ -489,6 +525,20 @@
       "isbn": "BL:A0021970424",
       "action": "Delete",
       "date": "27 /05/2024, 14:53"
+    },
+    {
+      "id": "0c27",
+      "bookName": "No title available",
+      "isbn": "No isbn available",
+      "action": "Create",
+      "date": "27 /05/2024, 15:21"
+    },
+    {
+      "id": "cbf3",
+      "bookName": "Igrot Shadal",
+      "isbn": "NWU:35556039691969",
+      "action": "Create",
+      "date": "27/05/2024, 15:23"
     }
   ],
   "favorites": []

@@ -62,6 +62,9 @@ nav ul li a:hover {
 /* Main content styles */
 main {
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 0;
 }
 
 .search {
@@ -84,16 +87,16 @@ main {
   border-radius: 10px;
   box-shadow: 0 0.4em rgba(77, 75, 75, 0.1);
   padding: 20px;
-  width: 40%;
+  width: 100%;
 }
 .allBooksCard {
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
-    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
 .showAllBooks {
   display: flex;
-  flex-direction: column;
-  gap: 1em;
+  flex-wrap: wrap;
+  align-items: center; 
 }
 .imgAndName {
   width: 40%;
@@ -110,12 +113,14 @@ main {
   position: sticky;
   top: 1em;
   height: fit-content;
-  width: 100%;
+  width: fit-content;
   display: flex;
   background-color: #cad4eeb1;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
     rgba(17, 17, 26, 0.05) 0px 8px 32px;
-    opacity: 0;
+  opacity: 0;
+  /* overflow: hidden; */
+  padding: 0;
 }
 .chosenBook p {
   color: #272727;
@@ -160,10 +165,6 @@ main {
   cursor: auto;
   color: grey;
 }
-main {
-  display: flex;
-  gap: 5em;
-}
 .search {
   display: flex;
 }
@@ -172,11 +173,15 @@ main {
   padding: 20px;
   background-color: #fffefe;
   box-shadow: 0 0.4rem #b5b1b1;
+  width: calc(20% - 20px); 
+  margin: 10px; 
+  height: 340px; /* Set a fixed height for all books */
+  overflow: hidden;
 }
 
 .book p {
-  width: 60%;
   padding-block: 0.5em;
+  font-size: small;
   font-family: "Tinos", serif;
   font-weight: 400;
   font-style: italic;
@@ -188,6 +193,10 @@ main {
   font-weight: 700;
   font-style: normal;
   color: #050404;
+}
+.book .bookName:hover{
+  overflow: visible;
+  transition: 0.3 2s ease-in-out;
 }
 .book:hover {
   background-color: hsla(0, 100%, 100%, 0.475);
@@ -221,4 +230,31 @@ span {
   font-optical-sizing: auto;
   font-style: normal;
 }
-
+.buttonsUpper {
+  display: flex;
+  align-items: center;
+  padding: 1em 0 1em 0;;
+  gap: 0.5em;
+  justify-content:flex-start;
+}
+.buttonsUpper button {
+  font-family: "Tinos", serif;
+  font-weight: bold;
+  font-style: italic;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  font-size: 1rem;
+  width: 4em;
+  border-radius:0;
+  color: rgb(86, 83, 83);
+  box-shadow: none;
+  cursor: pointer;
+}
+.buttonsUpper button:hover:not(:disabled){
+  color: rgb(44, 45, 76);
+  cursor: pointer;
+  background-color: transparent;
+  text-decoration: underline;
+  text-shadow: none;
+}

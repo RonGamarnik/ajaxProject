@@ -43,15 +43,18 @@ function showAllBooks(page) {
 }
 
 function chosenBook(book) {
-  chosenBookDisplay.style.opacity = "1";
+  chosenBookDisplay.style.zIndex = 9999;
+  showAllBooksDisplay.style.display = "hidden";
   chosenBookDisplay.innerHTML = `
     <div class="imgAndName">
       <h3 id="name">${book.bookName}</h3>
       <img src="${book.imageLarge}" alt="Book Image" />
+      <div class="buttonsUpper">
+        <button type="button" class="favorite" id="add-to-favorites">Add to Favorites</button>
+        <button type="button" class="delete" id="delete-book">Delete Book</button>
+        </div>
     </div>
     <div class="chosenBookData">
-      <button type="button" class="favorite" id="add-to-favorites">Add to Favorites</button>
-      <button type="button" class="delete" id="delete-book">Delete Book</button>
       <p><span>Author:</span> ${book.authorsName}</p>
       <p><span>Number of pages:</span> ${book.numPages}</p>
       <p><span>Description:</span> ${book.shortDescription}</p>

@@ -147,6 +147,7 @@ function addToFavorites(book) {
       console.error("There was an error fetching the favorites list:", error);
     });
 }
+
 function deleteBookFromLibrary(book) {
   axios
     .delete(`${urlBooks}/${book.id}`)
@@ -154,6 +155,7 @@ function deleteBookFromLibrary(book) {
       console.log("Book deleted:", response.data);
       removeBookFromDisplay(book.id);
       addDeleteToHistory(book);
+      deleteBookFromFavorite(book.bookName); // Use book name here
     })
     .catch((error) => {
       console.error("Error deleting book:", error);
@@ -168,7 +170,7 @@ function getCurrentDateTime() {
   const hours = String(now.getHours()).padStart(2, '0');
   const minutes = String(now.getMinutes()).padStart(2, '0');
 
-  return `${ day } /${month}/${ year }, ${ hours }:${ minutes }`;
+  return `${day} /${month}/${year}, ${hours}:${minutes}`;
 }
 
 function addDeleteToHistory(book) {
@@ -187,10 +189,41 @@ function addDeleteToHistory(book) {
       console.error("There was an error adding the book to history:", error);
     });
 }
+
 function removeBookFromDisplay(bookId) {
   const bookElement = document.querySelector(`.book[data-id="${bookId}"]`);
   if (bookElement) {
     bookElement.remove();
   }
 }
+
+function deleteBookFromFavorite(bookName) {
+  const favoritesUrl = "http://localhost:8001/favorites";
+
+  // Fetch the current list of favorite books
+  axios.get(favoritesUrl)
+    .then(response => {
+      const favoriteBooks = response.data;
+
+      // Find the favorite book with the matching bookName
+      const favoriteBook = favoriteBooks.find(favBook => favBook.bookName === bookName);
+
+      if (favoriteBook) {
+        // Delete the favorite book using its unique id
+        axios.delete(`${favoritesUrl}/${favoriteBook.id}`)
+          .then(response => {
+            console.log("Book deleted from favorites:", response.data);
+          })
+          .catch(error => {
+            console.error("Error deleting book from favorites:", error);
+          });
+      } else {
+        console.log("Book not found in favorites");
+      }
+    })
+    .catch(error => {
+      console.error("There was an error fetching the favorites list:", error);
+    });
+}
+
 showAllBooks(page);

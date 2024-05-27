@@ -1,90 +1,6 @@
 {
   "books": [
     {
-      "id": "bd6e",
-      "bookName": "A gift album of Jewish ceremonies",
-      "authorsName": "Johann Georg Puschner",
-      "numPages": 70,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=xUxEAAAAcAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=xUxEAAAAcAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "No categories available",
-      "isbn": "BSB:BSB10240944",
-      "numCopies": 6
-    },
-    {
-      "id": "d433",
-      "bookName": "A New Practical and Easy Method of Learning the Hebrew Language",
-      "authorsName": "Salomon Herxheimer",
-      "numPages": 146,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=UsENSaInc9MC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=UsENSaInc9MC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "Hebrew language",
-      "isbn": "NLI:2010604-10",
-      "numCopies": 6
-    },
-    {
-      "id": "1b56",
-      "bookName": "BABADADA black-and-white, Asante-twi - Hebrew (in hebrew script), dihyinari a yεhwε - visual dictionary (in hebrew script)",
-      "authorsName": "Babadada GmbH",
-      "numPages": 94,
-      "shortDescription": "BABADADA dictionaries are visual language education: Simple learning takes center stage. In a BABADADA dictionary images and language merge into a unit that is easy to learn and remember. Each book contains over 1000 black-and-white illustrations. The goal is to learn the basics of a language much faster and with more fun than possible with a complicated text dictionary. This book is based on the very successful online picture dictionary BABADADA.COM, which offers easy language entry for countless language combinations - Used by thousands of people and approved by well-known institutions. The languages used in this book are also called as follows: Hebräisch, hébreu, hebreo, ebraico, hebraico, hebrajski",
-      "imageSmall": "http://books.google.com/books/content?id=Z2MDEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=Z2MDEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "Study Aids",
-      "isbn": "9783752241556, 3752241551",
-      "numCopies": 5
-    },
-    {
-      "id": "6df0",
-      "bookName": "ad optimorum ... codicum fidem collata (a) Joh. Henr. Maio. Collationem ... ac ... cetera emendatae editionis requisita addidit Georgius Christ. Bürcklin",
-      "authorsName": "Biblia hebraice",
-      "numPages": 1428,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=SLpIAAAAcAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=SLpIAAAAcAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "No categories available",
-      "isbn": "ONB:+Z137111408",
-      "numCopies": 5
-    },
-    {
-      "id": "f7e0",
-      "bookName": "A bilingual concordance to the Targum of the Prophets",
-      "authorsName": "Johannes Cornelis de Moor, Alberdina Houtman",
-      "numPages": 400,
-      "shortDescription": "The bilingual (Aramaic-Hebrew) concordance to the Targum of the Prophets is the product of an international project based in the Theological University of the Reformed Churches in the Netherlands, Kampen (ThUK) and supported by the Netherlands Organization for Scientific Research (NWO). With this publication a major research tool becomes available to those engaged in Biblical and Jewish Studies. For the first time meaningful quotations from the Targum and the Masoretic Hebrew text of the Bible are set out in parallel so that the user of the concordance can study the translation technique of the Targum in much greater detail than was hitherto possible. The concordance opens up Targum Jonathan to scholars in various fields. It is an indispensable tool not only for research in the fields of textual criticism and the history of interpretation of the Hebrew Bible, but also for the study of early Judaism, the New Testament and patristics.To facilitate consultation on the basis of the Hebrew, every concordance per book contains a Hebrew-Aramaic index. The final volume will contain additions and corrections, a cumulative Aramaic-Hebrew index, as well as an English-Aramaic index.",
-      "imageSmall": "http://books.google.com/books/content?id=mndph1RM6rMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=mndph1RM6rMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "Religion",
-      "isbn": "9004126414, 9789004126411",
-      "numCopies": 5
-    },
-    {
-      "id": "2dba",
-      "bookName": "אגרות שד\"ל",
-      "authorsName": "שמואל דוד בן חזקיה לוצטו",
-      "numPages": 396,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=DwaMBIICGQEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=DwaMBIICGQEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "Hebrew language",
-      "isbn": "NLI:1978775-260",
-      "numCopies": 5
-    },
-    {
-      "id": "ba8a",
-      "bookName": "Rational Theology. A lecture, etc",
-      "authorsName": "Francis Reginald Statham",
-      "numPages": 20,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=yFAB3dJ3HHgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=yFAB3dJ3HHgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "No categories available",
-      "isbn": "BL:A0021970424",
-      "numCopies": 5
-    },
-    {
       "id": "801a",
       "bookName": "A Memorial of the Rev. James W. Dale, D.D.",
       "authorsName": "James Roberts",
@@ -503,6 +419,18 @@
       "categories": "Military cadets",
       "isbn": "9781434353924, 1434353923",
       "numCopies": 5
+    },
+    {
+      "id": "5fa6",
+      "bookName": "hjb",
+      "authorsName": "ybh",
+      "numPages": 7,
+      "shortDescription": "7bn",
+      "imageSmall": "hk",
+      "imageLarge": "hj",
+      "categories": "nj",
+      "isbn": "ij",
+      "numCopies": 8
     }
   ],
   "history": [
@@ -512,50 +440,56 @@
       "isbn": "9789659162161, 9659162162",
       "action": "Delete",
       "date": "27 /05/2024, 11:58"
+    },
+    {
+      "id": "c15e",
+      "bookName": "A gift album of Jewish ceremonies",
+      "isbn": "BSB:BSB10240944",
+      "action": "Delete",
+      "date": "27 /05/2024, 14:17"
+    },
+    {
+      "id": "1611",
+      "bookName": "A New Practical and Easy Method of Learning the Hebrew Language",
+      "isbn": "NLI:2010604-10",
+      "action": "Delete",
+      "date": "27 /05/2024, 14:22"
+    },
+    {
+      "id": "25b0",
+      "bookName": "BABADADA black-and-white, Asante-twi - Hebrew (in hebrew script), dihyinari a yεhwε - visual dictionary (in hebrew script)",
+      "isbn": "9783752241556, 3752241551",
+      "action": "Delete",
+      "date": "27 /05/2024, 14:43"
+    },
+    {
+      "id": "ae49",
+      "bookName": "ad optimorum ... codicum fidem collata (a) Joh. Henr. Maio. Collationem ... ac ... cetera emendatae editionis requisita addidit Georgius Christ. Bürcklin",
+      "isbn": "ONB:+Z137111408",
+      "action": "Delete",
+      "date": "27 /05/2024, 14:46"
+    },
+    {
+      "id": "b7f0",
+      "bookName": "A bilingual concordance to the Targum of the Prophets",
+      "isbn": "9004126414, 9789004126411",
+      "action": "Delete",
+      "date": "27 /05/2024, 14:48"
+    },
+    {
+      "id": "5c39",
+      "bookName": "אגרות שד\"ל",
+      "isbn": "NLI:1978775-260",
+      "action": "Delete",
+      "date": "27 /05/2024, 14:49"
+    },
+    {
+      "id": "0130",
+      "bookName": "Rational Theology. A lecture, etc",
+      "isbn": "BL:A0021970424",
+      "action": "Delete",
+      "date": "27 /05/2024, 14:53"
     }
   ],
-  "favorites": [
-    {
-      "id": "b8d2",
-      "bookName": "A Hebrew reader",
-      "authorsName": "Eli Noyes",
-      "imageSmall": "http://books.google.com/books/content?id=8R5IAQAAMAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-    },
-    {
-      "id": "7c79",
-      "bookName": "A Grammar of the English language for the use of Hebrews",
-      "authorsName": "No authors available",
-      "imageSmall": "http://books.google.com/books/content?id=BclL2lJNCH0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-    },
-    {
-      "id": "e69f",
-      "bookName": "A New Practical and Easy Method of Learning the Hebrew Language",
-      "authorsName": "Salomon Herxheimer",
-      "imageSmall": "http://books.google.com/books/content?id=UsENSaInc9MC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-    },
-    {
-      "id": "7c30",
-      "bookName": "A gift album of Jewish ceremonies",
-      "authorsName": "Johann Georg Puschner",
-      "imageSmall": "http://books.google.com/books/content?id=xUxEAAAAcAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-    },
-    {
-      "id": "ca3d",
-      "bookName": "ad optimorum ... codicum fidem collata (a) Joh. Henr. Maio. Collationem ... ac ... cetera emendatae editionis requisita addidit Georgius Christ. Bürcklin",
-      "authorsName": "Biblia hebraice",
-      "imageSmall": "http://books.google.com/books/content?id=SLpIAAAAcAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-    },
-    {
-      "id": "6c41",
-      "bookName": "אגרות שד\"ל",
-      "authorsName": "שמואל דוד בן חזקיה לוצטו",
-      "imageSmall": "http://books.google.com/books/content?id=DwaMBIICGQEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-    },
-    {
-      "id": "728d",
-      "bookName": "The Christian Kingdom. A Sermon, Etc",
-      "authorsName": "Henry James Coleridge",
-      "imageSmall": "http://books.google.com/books/content?id=XHyvKN3qJ5wC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-    }
-  ]
+  "favorites": []
 }

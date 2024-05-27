@@ -1,54 +1,6 @@
 {
   "books": [
     {
-      "id": "08b3",
-      "bookName": "A Hebrew reader",
-      "authorsName": "Eli Noyes",
-      "numPages": 204,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=8R5IAQAAMAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=8R5IAQAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "Hebrew language",
-      "isbn": "NYPL:33433113860310",
-      "numCopies": 5
-    },
-    {
-      "id": "854a",
-      "bookName": "A Mosaic of Israel's Traditions",
-      "authorsName": "Esther Shkalim",
-      "numPages": 322,
-      "shortDescription": "Subtitle on cover: Unity through diversity.",
-      "imageSmall": "http://books.google.com/books/content?id=NCutNgYYpjgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=NCutNgYYpjgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "Religion",
-      "isbn": "1932687564, 9781932687569",
-      "numCopies": 5
-    },
-    {
-      "id": "8b9e",
-      "bookName": "A Grammar of the English language for the use of Hebrews",
-      "authorsName": "No authors available",
-      "numPages": 158,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=BclL2lJNCH0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=BclL2lJNCH0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "No categories available",
-      "isbn": "BDM:13020100008805",
-      "numCopies": 5
-    },
-    {
-      "id": "f6ff",
-      "bookName": "A BROAD VIEW of SCIENCE and MORAL VALUES",
-      "authorsName": "No authors available",
-      "numPages": 210,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=hjSe3cdtDTgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=hjSe3cdtDTgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "No categories available",
-      "isbn": "9789659162161, 9659162162",
-      "numCopies": 5
-    },
-    {
       "id": "bd6e",
       "bookName": "A gift album of Jewish ceremonies",
       "authorsName": "Johann Georg Puschner",
@@ -527,8 +479,71 @@
       "categories": "Fiction",
       "isbn": "9781892617156, 1892617153",
       "numCopies": 5
+    },
+    {
+      "id": "7404",
+      "bookName": "Harry's War - The True Story of the Soldier Prince",
+      "authorsName": "Robert Jobson",
+      "numPages": 206,
+      "shortDescription": "On February 28, 2008, to great international surprise, the British Ministry of Defense released a statement acknowledging that Prince Harry, son of the late Princess Diana and third in line to the British throne, had secretly been deployed to Afghanistan. Subsequent reports revealed that the prince had killed up to thirty Taliban insurgents in directing at least three air strikes, and that he had helped Gurkha troops repel a ground attack of Taliban insurgents using a machine gun. On February 29, Prince Harry was withdrawn from the country with distinction via a covert SAS deployment. This is the amazing story of the first British royal to serve his country in 25 years and his 10 heroic weeks of combat.",
+      "imageSmall": "http://books.google.com/books/content?id=fzutDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "imageLarge": "http://books.google.com/books/content?id=fzutDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "categories": "Biography & Autobiography",
+      "isbn": "9781782195078, 1782195076",
+      "numCopies": 5
     }
   ],
-  "history": [],
-  "favorites": []
+  "history": [
+    {
+      "id": "3283",
+      "bookName": "A BROAD VIEW of SCIENCE and MORAL VALUES",
+      "isbn": "9789659162161, 9659162162",
+      "action": "Delete",
+      "date": "27 /05/2024, 11:58"
+    }
+  ],
+  "favorites": [
+    {
+      "id": "b8d2",
+      "bookName": "A Hebrew reader",
+      "authorsName": "Eli Noyes",
+      "imageSmall": "http://books.google.com/books/content?id=8R5IAQAAMAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+    },
+    {
+      "id": "7c79",
+      "bookName": "A Grammar of the English language for the use of Hebrews",
+      "authorsName": "No authors available",
+      "imageSmall": "http://books.google.com/books/content?id=BclL2lJNCH0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+    },
+    {
+      "id": "e69f",
+      "bookName": "A New Practical and Easy Method of Learning the Hebrew Language",
+      "authorsName": "Salomon Herxheimer",
+      "imageSmall": "http://books.google.com/books/content?id=UsENSaInc9MC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+    },
+    {
+      "id": "7c30",
+      "bookName": "A gift album of Jewish ceremonies",
+      "authorsName": "Johann Georg Puschner",
+      "imageSmall": "http://books.google.com/books/content?id=xUxEAAAAcAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+    },
+    {
+      "id": "ca3d",
+      "bookName": "ad optimorum ... codicum fidem collata (a) Joh. Henr. Maio. Collationem ... ac ... cetera emendatae editionis requisita addidit Georgius Christ. Bürcklin",
+      "authorsName": "Biblia hebraice",
+      "imageSmall": "http://books.google.com/books/content?id=SLpIAAAAcAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+    },
+    {
+      "id": "6c41",
+      "bookName": "אגרות שד\"ל",
+      "authorsName": "שמואל דוד בן חזקיה לוצטו",
+      "imageSmall": "http://books.google.com/books/content?id=DwaMBIICGQEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+    },
+    {
+      "id": "728d",
+      "bookName": "The Christian Kingdom. A Sermon, Etc",
+      "authorsName": "Henry James Coleridge",
+      "imageSmall": "http://books.google.com/books/content?id=XHyvKN3qJ5wC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+    }
+  ]
 }

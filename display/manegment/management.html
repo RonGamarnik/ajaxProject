@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="managementStyle.css" />
     <title>Welcome to open library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Cardo:ital,wght@0,400;0,700;1,400&family=Forum&family=News+Cycle:wght@400;700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -16,7 +30,11 @@
           <li><a href="/display/home/index.html">HOME</a></li>
           <li><a href="/display/favorites/index.html">FAVORITES</a></li>
           <li><a href="/display/history/history.html">HISTORY</a></li>
-          <li><a href="/display/manegment/management.html">INVENTORY MANAGEMENT</a></li>
+          <li>
+            <a href="/display/manegment/management.html"
+              >ADD BOOK TO LIBRARY</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
@@ -26,7 +44,10 @@
         <button id="fetch-books-button" type="submit">Search</button>
       </div>
       <div id="books"></div>
-      <!-- This is where the fetched books will be displayed -->
+      <div class="pagination">
+        <button id="previous"></button>
+        <button id="next"></button>
+      </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>

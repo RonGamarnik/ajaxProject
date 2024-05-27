@@ -527,6 +527,66 @@
       "categories": "Fiction",
       "isbn": "9781892617156, 1892617153",
       "numCopies": 5
+    },
+    {
+      "id": "7293",
+      "bookName": "Harry Potter and the Prisoner of Azkaban",
+      "authorsName": "J. K. Rowling",
+      "numPages": 734,
+      "shortDescription": "Harry Potter must confront the devious and dangerous wizard responsible for his parents' deaths.",
+      "imageSmall": "http://books.google.com/books/content?id=4mtauAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      "imageLarge": "http://books.google.com/books/content?id=4mtauAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "categories": "Escaped prisoners",
+      "isbn": "1536443743, 9781536443745",
+      "numCopies": 5
+    },
+    {
+      "id": "c3ec",
+      "bookName": "Harry Potter and International Relations",
+      "authorsName": "Daniel H. Nexon, Iver B. Neumann",
+      "numPages": 262,
+      "shortDescription": "Drawing on a range of historical and sociological sources, this work shows how aspects of Harry's world contain aspects of our own. It also includes chapters on the political economy of the franchise, and on the problems of studying popular culture.",
+      "imageSmall": "http://books.google.com/books/content?id=DKcWE3WXoj8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "imageLarge": "http://books.google.com/books/content?id=DKcWE3WXoj8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "categories": "Juvenile Fiction",
+      "isbn": "0742539598, 9780742539594",
+      "numCopies": 5
+    },
+    {
+      "id": "6d1f",
+      "bookName": "Harry Potter and the Chamber of Secrets",
+      "authorsName": "J. K. Rowling",
+      "numPages": 260,
+      "shortDescription": "Witchcraft, wizardry - fiction.",
+      "imageSmall": "http://books.google.com/books/content?id=nmXTy4FPfcwC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      "imageLarge": "http://books.google.com/books/content?id=nmXTy4FPfcwC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "categories": "Boarding schools",
+      "isbn": "1551922444, 9781551922447",
+      "numCopies": 5
+    },
+    {
+      "id": "d482",
+      "bookName": "Friends and Foes of Harry Potter",
+      "authorsName": "Nikita Agarwal, Chitra Agarwal",
+      "numPages": 162,
+      "shortDescription": "There is no doubt that Harry Potter reigns over the children's literature market. J.K.Rowling's inimitable cast of Harry Potter adventures has ignited the imaginations of children and grown-ups alike all over the world. But how much do you really know about J.K. Rowling's inimitable characters? Did you know that the Harry Potter characters hold secrets behind their names? Hermione, Snape, Crabbe, even Hogwarts School - all have histories waiting to be discovered.Now, two young fans of the Harry Potter series present a companion book for other readers who can't get enough of Harry and his friends and foes. This book, Friends and Foes of Harry Potter: Names Decoded, reveals the secrets behind the names of the mysterious characters, houses, and pets. Written by young fans, for all fans, this book also offers journaling space, trivia quizzes, and exquisite illustrations.This book is a perfect gift for children and adults whose inquisitive natures match those of their favorite heroes, Harry, Hermione, and Ron. Fans can quiz each other and use the glossary to look up unfamiliar terms that are unique to the Harry Potter series. What is the meaning behind Harry Potter's name? Or the uncanny resemblance of Voldemort to the Roman god of Time? You'll have to read Friends and Foes of Harry Potter to find out!",
+      "imageSmall": "http://books.google.com/books/content?id=JGQBcu5O_ZcC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "imageLarge": "http://books.google.com/books/content?id=JGQBcu5O_ZcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "categories": "Children's stories, English",
+      "isbn": "9781598002218, 159800221X",
+      "numCopies": 5
+    },
+    {
+      "id": "508a",
+      "bookName": "JK Rowling's Harry Potter Novels",
+      "authorsName": "Philip Nel",
+      "numPages": 100,
+      "shortDescription": "Explores the themes found in the novels, provides information about reviews of the novels, and includes information about the life of J.K. Rowling.",
+      "imageSmall": "http://books.google.com/books/content?id=qQYfoV62d30C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "imageLarge": "http://books.google.com/books/content?id=qQYfoV62d30C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "categories": "Literary Criticism",
+      "isbn": "0826452329, 9780826452320",
+      "numCopies": 5
     }
   ],
   "history": [],

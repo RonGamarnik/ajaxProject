@@ -31,7 +31,7 @@ function showAllBooks(page) {
           <p class="bookName">${bookName}</p>
         `;
 
-        // Correctly add the event listener
+        // Add click event listener
         bookElement.addEventListener("click", () => chosenBook(book));
 
         showAllBooksDisplay.appendChild(bookElement);
@@ -43,24 +43,33 @@ function showAllBooks(page) {
 }
 
 function chosenBook(book) {
+  chosenBookDisplay.style.opacity = "1";
   chosenBookDisplay.innerHTML = `
-  <div class="imgAndName">
-    <h3 id="name">${book.bookName}</h3>
-    <img src="${book.imageLarge}" alt="Book Image" />
-  </div>
-  <div class="chosenBookData">
-    <p><span>Author:</span> ${book.authorsName}</p>
-    <p><span>Number of pages:</span> ${book.numPages}</p>
-    <p><span>Description:</span> ${book.shortDescription}</p>
-    <p><span>Categories:</span> ${book.categories}</p>
-    <p><span>Number of copies:</span> ${book.numCopies}</p>
-    <p><span>ISBN:</span> ${book.isbn}</p>
-    <div class="buttonsForCopies">
-    <button id="plus" onclick="addCopies(${book.id})">+</button>
-    <button onclick="removeCopies(${book.id})">-</button>
+    <div class="imgAndName">
+      <h3 id="name">${book.bookName}</h3>
+      <img src="${book.imageLarge}" alt="Book Image" />
     </div>
-  </div>
+    <div class="chosenBookData">
+      <button type="button" class="favorite" id="add-to-favorites">Add to Favorites</button>
+      <button type="button" class="delete" id="delete-book">Delete Book</button>
+      <p><span>Author:</span> ${book.authorsName}</p>
+      <p><span>Number of pages:</span> ${book.numPages}</p>
+      <p><span>Description:</span> ${book.shortDescription}</p>
+      <p><span>Categories:</span> ${book.categories}</p>
+      <p><span>Number of copies:</span> ${book.numCopies}</p>
+      <p><span>ISBN:</span> ${book.isbn}</p>
+      <div class="buttonsForCopies">
+        <button id="plus">+</button>
+        <button id="minus">-</button>
+      </div>
+    </div>
   `;
+
+  // Add event listeners in JavaScript
+  document.getElementById('add-to-favorites').addEventListener('click', () => addToFavorites(book));
+  document.getElementById('delete-book').addEventListener('click', () => deleteBookFromLibrary(book));
+  document.getElementById('plus').addEventListener('click', () => addCopies(book.id));
+  document.getElementById('minus').addEventListener('click', () => removeCopies(book.id));
 }
 
 function addCopies(bookId) {
@@ -104,4 +113,84 @@ function previous() {
   showAllBooks(page);
 }
 
+function addToFavorites(book) {
+  const favoritesUrl = "http://localhost:8001/favorites";
+
+  // Fetch the current list of favorite books
+  axios.get(favoritesUrl)
+    .then(response => {
+      const favoriteBooks = response.data;
+
+      // Check if the book is already in the favorites list
+      const bookExists = favoriteBooks.some(favBook => favBook.bookName === book.bookName);
+
+      if (!bookExists) {
+        // Ensure book properties are correctly accessed
+        const favoriteBook = {
+          bookName: book.bookName || "No title available",
+          authorsName: book.authorsName || "No authors available",
+          imageSmall: book.imageSmall || "No image available",
+        };
+
+        axios.post(favoritesUrl, favoriteBook)
+          .then(response => {
+            console.log("Book added to favorites:", response.data);
+          })
+          .catch(error => {
+            console.error("There was an error adding the book to favorites:", error);
+          });
+      } else {
+        console.log("Book already exists in favorites");
+      }
+    })
+    .catch(error => {
+      console.error("There was an error fetching the favorites list:", error);
+    });
+}
+function deleteBookFromLibrary(book) {
+  axios
+    .delete(`${urlBooks}/${book.id}`)
+    .then((response) => {
+      console.log("Book deleted:", response.data);
+      removeBookFromDisplay(book.id);
+      addDeleteToHistory(book);
+    })
+    .catch((error) => {
+      console.error("Error deleting book:", error);
+    });
+}
+
+function getCurrentDateTime() {
+  const now = new Date();
+  const day = String(now.getDate()).padStart(2, '0');
+  const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+  const year = now.getFullYear();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+
+  return `${ day } /${month}/${ year }, ${ hours }:${ minutes }`;
+}
+
+function addDeleteToHistory(book) {
+  const historyUrl = "http://localhost:8001/history";
+  const historyBook = {
+    bookName: book.bookName || "No title available",
+    isbn: book.isbn || "No isbn available",
+    action: "Delete",
+    date: getCurrentDateTime()
+  };
+  axios.post(historyUrl, historyBook)
+    .then(response => {
+      console.log("Book added to history:", response.data);
+    })
+    .catch(error => {
+      console.error("There was an error adding the book to history:", error);
+    });
+}
+function removeBookFromDisplay(bookId) {
+  const bookElement = document.querySelector(`.book[data-id="${bookId}"]`);
+  if (bookElement) {
+    bookElement.remove();
+  }
+}
 showAllBooks(page);

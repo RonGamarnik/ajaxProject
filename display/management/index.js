@@ -62,6 +62,7 @@ async function addBookToLocalServer(book) {
 
 async function displayBooks(books) {
   const booksContainer = document.getElementById("books");
+booksContainer.style.opacity = "1";
   booksContainer.innerHTML = ""; // Clear previous results
   booksContainer.style.opacity = 1;
 

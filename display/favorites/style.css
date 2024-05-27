@@ -21,9 +21,6 @@ header {
   font-family: "Forum", serif;
   font-weight: 600;
   font-style: normal;
-  font-family: "Forum", serif;
-  font-weight: 600;
-  font-style: normal;
 }
 
 .logo {
@@ -62,6 +59,8 @@ nav ul li a:hover {
 /* Main content styles */
 main {
   padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .search {
@@ -77,23 +76,19 @@ main {
   outline: none;
 }
 
-/* SearchResult styles */
-.allBooksCard,
-.chosenBook {
+.favorites {
   background-color: #cad4eeb1;
   border-radius: 10px;
   box-shadow: 0 0.4em rgba(77, 75, 75, 0.1);
   padding: 20px;
-  width: 40%;
-}
-.allBooksCard {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
     rgba(17, 17, 26, 0.05) 0px 8px 32px;
-}
-.showAllBooks {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+
+  justify-content: center;
 }
 .imgAndName {
   width: 40%;
@@ -115,6 +110,7 @@ main {
   background-color: #cad4eeb1;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
     rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  opacity: 0;
 }
 .chosenBook p {
   color: #272727;
@@ -159,36 +155,32 @@ main {
   cursor: auto;
   color: grey;
 }
-main {
-  display: flex;
-  gap: 5em;
-}
 .search {
   display: flex;
 }
-.book {
+.favoriteBook {
   border-radius: 25px;
   padding: 20px;
   background-color: #fffefe;
   box-shadow: 0 0.4rem #b5b1b1;
 }
 
-.book p {
-  width: 60%;
+.favoriteBook p {
+  width: 20%;
   padding-block: 0.5em;
   font-family: "Tinos", serif;
   font-weight: 400;
   font-style: italic;
   color: #333;
 }
-.book .bookName {
+.favoriteBook .bookName {
   font-family: "Vollkorn", serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   color: #050404;
 }
-.book:hover {
+.favoriteBook:hover {
   background-color: hsla(0, 100%, 100%, 0.475);
   color: white;
   cursor: pointer;
@@ -220,4 +212,31 @@ span {
   font-optical-sizing: auto;
   font-style: normal;
 }
+.favoriteBook {
+  border-radius: 25px;
+  padding: 20px;
+  background-color: #fffefe;
+  box-shadow: 0 0.4rem #b5b1b1;
+  width: 20%;
+}
 
+.favoriteBook p {
+  width: fit-content;
+  padding-block: 0.5em;
+  font-family: "Tinos", serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #333;
+}
+.favoriteBook .bookName {
+  font-family: "Vollkorn", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: #050404;
+}
+.favoriteBook:hover {
+  background-color: hsla(0, 100%, 100%, 0.475);
+  color: white;
+  cursor: pointer;
+}

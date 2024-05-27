@@ -21,9 +21,6 @@ header {
   font-family: "Forum", serif;
   font-weight: 600;
   font-style: normal;
-  font-family: "Forum", serif;
-  font-weight: 600;
-  font-style: normal;
 }
 
 .logo {
@@ -110,17 +107,16 @@ main {
   padding-bottom: 0.7em;
 }
 .chosenBook {
-  position: sticky;
-  top: 1em;
-  height: fit-content;
-  width: fit-content;
+  width: 60%;
   display: flex;
-  background-color: #cad4eeb1;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
-    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  background-color: #adc0efe2;
+  /* box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+  rgba(17, 17, 26, 0.05) 0px 8px 32px; */
   opacity: 0;
-  /* overflow: hidden; */
-  padding: 0;
+  padding: 3em;
+  position: absolute;
+  top: 3em;
+  right: 17em;
 }
 .chosenBook p {
   color: #272727;
@@ -257,4 +253,14 @@ span {
   background-color: transparent;
   text-decoration: underline;
   text-shadow: none;
+}
+.close{
+position: relative;
+background-color: transparent;
+border: none;
+cursor: pointer;
+font-weight: 900;
+  left: 51em;
+  bottom: 3em;
+
 }

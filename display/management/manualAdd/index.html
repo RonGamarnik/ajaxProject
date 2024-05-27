@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <input type="text" id="book-name" placeholder="Book name" required />
+        <input type="text" id="authors-name" placeholder="Authors name" required/>
+        <input type="number" id="num-pages" placeholder="Number of pages" required/>
+        <input
+          type="text"
+          id="short-description"
+          placeholder="Short description"/>
+        <input type="text" id="image-small" placeholder="Image small" />
+        <input type="text" id="image-large" placeholder="Image large" />
+        <input type="text" id="categories" placeholder="Categories" />
+        <input type="text" id="isbn" placeholder="ISBN"required />
+        <input type="number" id="num-copies" placeholder="Number of copies" required/>
+        <button type="submit" onclick="formSubmit()" class="manualButton">
+          Submit
+        </button>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

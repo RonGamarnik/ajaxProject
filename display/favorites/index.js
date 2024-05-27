@@ -18,8 +18,8 @@ function getFavorites() {
 
                 favoriteBook.innerHTML = `
           <img src="${imgSrc}" alt="Book Image"/>
-          <h3>${bookName}</h3>
           <p>${author}</p>
+          <h3>${bookName}</h3>
         `;
 
                 favoritesDisplay.appendChild(favoriteBook);

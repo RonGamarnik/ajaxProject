@@ -1,0 +1,104 @@
+/* Resetting default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Setting up basic styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Header styles */
+header {
+  background-color: #cad4eeb1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  font-family: "Forum", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 100px; /* Adjust as needed */
+  height: auto;
+  margin-right: 20px;
+}
+nav {
+  padding-top: 0.35em;
+}
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #0e3f72;
+}
+
+/* Main content styles */
+main {
+  padding: 20px;
+}
+
+.search {
+  margin-bottom: 20px;
+  height: 3em !important;
+}
+
+.search input[type="search"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* SearchResult styles */
+#books {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+}
+.book {
+  border: 2px solid salmon;
+  border-radius: 25px;
+  padding: 1em;
+  margin-bottom: 3em;
+}
+.book:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+main {
+  display: flex;
+  gap: 5em;
+}
+.search {
+  display: flex;
+}

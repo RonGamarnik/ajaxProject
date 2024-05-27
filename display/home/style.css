@@ -18,6 +18,9 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
   display: flex;
+  font-family: "Forum", serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .logo {
@@ -107,6 +110,8 @@ main {
   width: 100%;
   display: flex;
   background-color: #cad4eeb1;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
 .chosenBook p {
   color: #272727;

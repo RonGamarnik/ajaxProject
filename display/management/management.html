@@ -11,6 +11,14 @@
       href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Cardo:ital,wght@0,400;0,700;1,400&family=Forum&family=News+Cycle:wght@400;700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -23,8 +31,8 @@
           <li><a href="/display/favorites/index.html">FAVORITES</a></li>
           <li><a href="/display/history/history.html">HISTORY</a></li>
           <li>
-            <a href="/display/management/management.html"
-              >INVENTORY MANAGEMENT</a
+            <a href="/display/manegment/management.html"
+              >ADD BOOK TO LIBRARY</a
             >
           </li>
         </ul>
@@ -36,7 +44,14 @@
         <button id="fetch-books-button" type="submit">Search</button>
       </div>
       <div id="books"></div>
-      <!-- This is where the fetched books will be displayed -->
+      <div class="pagination">
+        <button id="previous"></button>
+        <button id="next"></button>
+        <div class="manualAdd">
+          <p>if you have not the book you asked for </p>
+          <a href="/display/management/manualAdd/index.html">Click me</a>
+        </div>
+      </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>

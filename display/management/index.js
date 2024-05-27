@@ -1,8 +1,15 @@
 const API_KEY = "AIzaSyAG2FJV_karWD_hHLYtTbCnAFj79VFbK1g";
-const maxResults = 40; // Max results per request (Google Books API limit)
-let startIndex = 0; // Start index for pagination
+const maxResults = 10; // Max results per request
+let page = 1;
+const paginationContainer = document.querySelector(".pagination");
 
-async function fetchBooksFromGoogle(query) {
+async function fetchBooksFromGoogle(query, page) {
+  if (!query) {
+    console.error("Missing query.");
+    return [];
+  }
+
+  const startIndex = 1;
   const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${API_KEY}&startIndex=${startIndex}&maxResults=${maxResults}`;
   try {
     const response = await axios.get(url);
@@ -36,8 +43,8 @@ async function addBookToLocalServer(book) {
       : "No categories available",
     isbn: book.volumeInfo.industryIdentifiers
       ? book.volumeInfo.industryIdentifiers
-        .map((id) => id.identifier)
-        .join(", ")
+          .map((id) => id.identifier)
+          .join(", ")
       : "No ISBN available",
     numCopies: 5, // Default number of copies
   };
@@ -55,11 +62,11 @@ async function addBookToLocalServer(book) {
 
 async function displayBooks(books) {
   const booksContainer = document.getElementById("books");
-booksContainer.style.opacity = "1";
   booksContainer.innerHTML = ""; // Clear previous results
+  booksContainer.style.opacity = 1;
 
-  const existingBooks = await axios.get('http://localhost:8001/books');
-  const existingTitles = existingBooks.data.map(b => b.bookName);
+  const existingBooks = await axios.get("http://localhost:8001/books");
+  const existingTitles = existingBooks.data.map((b) => b.bookName);
 
   books.forEach((book, index) => {
     const title = book.volumeInfo.title || "No title available";
@@ -67,7 +74,9 @@ booksContainer.style.opacity = "1";
       const bookElement = document.createElement("div");
       bookElement.classList.add("book");
 
-      const authors = book.volumeInfo.authors ? book.volumeInfo.authors.join(", ") : "No authors available";
+      const authors = book.volumeInfo.authors
+        ? book.volumeInfo.authors.join(", ")
+        : "No authors available";
 
       bookElement.innerHTML = `
         <h3>${title}</h3>
@@ -78,16 +87,41 @@ booksContainer.style.opacity = "1";
       booksContainer.appendChild(bookElement);
 
       // Add event listener for the button
-      document.getElementById(`add-book-${index}`).addEventListener("click", () => {
-        addBookToLocalServer(book);
-      });
+      document
+        .getElementById(`add-book-${index}`)
+        .addEventListener("click", () => {
+          addBookToLocalServer(book);
+        });
     }
+  });
+
+  // Add pagination buttons
+  const buttonPrevious = document.getElementById("previous");
+  const buttonNext = document.getElementById("next");
+  buttonPrevious.innerHTML = "Previous";
+  buttonNext.innerHTML = "Next";
+  paginationContainer.style.opacity = "1";
+
+  buttonPrevious.addEventListener("click", () => {
+    if (page > 1) {
+      page -= 1;
+      fetchAndDisplayBooks();
+    }
+  });
+
+  buttonNext.addEventListener("click", () => {
+    page += 1;
+    fetchAndDisplayBooks();
   });
 }
 
 async function fetchAndDisplayBooks() {
   const searchBookValue = document.getElementById("book-search").value;
-  const books = await fetchBooksFromGoogle(searchBookValue);
+  if (!searchBookValue.trim()) {
+    console.log("Please enter a search query.");
+    return;
+  }
+  const books = await fetchBooksFromGoogle(searchBookValue, page);
   if (books.length > 0) {
     await displayBooks(books);
   } else {
@@ -95,4 +129,9 @@ async function fetchAndDisplayBooks() {
   }
 }
 
-document.getElementById("fetch-books-button").addEventListener("click", fetchAndDisplayBooks);
+document
+  .getElementById("fetch-books-button")
+  .addEventListener("click", fetchAndDisplayBooks);
+
+// Initial fetch and display
+fetchAndDisplayBooks();

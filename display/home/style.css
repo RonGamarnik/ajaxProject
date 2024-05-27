@@ -21,6 +21,9 @@ header {
   font-family: "Forum", serif;
   font-weight: 600;
   font-style: normal;
+  font-family: "Forum", serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .logo {
@@ -218,3 +221,4 @@ span {
   font-optical-sizing: auto;
   font-style: normal;
 }
+

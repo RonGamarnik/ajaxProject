@@ -1,45 +1,99 @@
 const urlBooks = "http://localhost:8001/books";
 const showAllBooksDisplay = document.querySelector(".showAllBooks");
 const chosenBookDisplay = document.querySelector(".chosenBook");
+const searchInput = document.getElementById("searchInput");
 
 let page = 1;
-let allBooks = []; // Store all books for easy access
+let allBooks = [];
+let filteredBooks = [];
+let isSearching = false;
 
 function showAllBooks(page) {
   axios
     .get(`${urlBooks}?_page=${page}`)
     .then((response) => {
-      allBooks = response.data.data; // Store the fetched books
-
-      // Clear previous results
-      showAllBooksDisplay.innerHTML = "";
-
-      allBooks.forEach((book) => {
-        const bookElement = document.createElement("div");
-        bookElement.classList.add("book");
-
-        // Correctly access book properties
-        const imgSrc = book.imageSmall ? book.imageSmall : "default-image.jpg";
-        const bookName = book.bookName ? book.bookName : "No title available";
-        const authorsName = book.authorsName
-          ? book.authorsName
-          : "No authors available";
-
-        bookElement.innerHTML = `
-          <img src="${imgSrc}" alt="Book Image"/>
-          <p>${authorsName}</p>
-          <p class="bookName">${bookName}</p>
-        `;
-
-        // Add click event listener
-        bookElement.addEventListener("click", () => chosenBook(book));
-
-        showAllBooksDisplay.appendChild(bookElement);
-      });
+      const responseData = response.data;
+      if (Array.isArray(responseData.data)) {
+        const books = responseData.data;
+        displayBooks(books);
+      } else {
+        console.error("Unexpected response structure:", responseData);
+      }
     })
     .catch((error) => {
       console.error("Error fetching books:", error);
     });
+}
+
+function displayBooks(books) {
+  showAllBooksDisplay.innerHTML = "";
+  books.forEach((book) => {
+    const bookElement = document.createElement("div");
+    bookElement.classList.add("book");
+    bookElement.setAttribute("data-id", book.id);
+
+    const imgSrc = book.imageSmall ? book.imageSmall : "default-image.jpg";
+    const bookName = book.bookName ? book.bookName : "No title available";
+    const authorsName = book.authorsName ? book.authorsName : "No authors available";
+
+    bookElement.innerHTML = `
+      <img src="${imgSrc}" alt="Book Image"/>
+      <p>${authorsName}</p>
+      <p class="bookName">${bookName}</p>
+    `;
+
+    bookElement.addEventListener("click", () => chosenBook(book));
+    showAllBooksDisplay.appendChild(bookElement);
+  });
+}
+
+function searchBooks() {
+  const searchString = searchInput.value.toLowerCase();
+  isSearching = true;
+  page = 1; // Reset to first page for search results
+
+  axios.get(urlBooks)
+    .then((response) => {
+      if (Array.isArray(response.data)) {
+        allBooks = response.data;
+        filteredBooks = allBooks.filter(book =>
+          book.bookName && book.bookName.toLowerCase().includes(searchString)
+        );
+        displayBooks(getPaginatedBooks(filteredBooks, page));
+      } else {
+        console.error("Unexpected response structure:", response.data);
+      }
+    })
+    .catch((error) => {
+      console.error("Error fetching books:", error);
+    });
+}
+
+function getPaginatedBooks(books, page) {
+  const booksPerPage = 10;
+  const start = (page - 1) * booksPerPage;
+  const end = start + booksPerPage;
+  return books.slice(start, end);
+}
+
+function next() {
+  page += 1;
+  if (isSearching) {
+    displayBooks(getPaginatedBooks(filteredBooks, page));
+  } else {
+    showAllBooks(page);
+  }
+}
+
+function previous() {
+  if (page > 1) {
+    page -= 1;
+    if (isSearching) {
+      displayBooks(getPaginatedBooks(filteredBooks, page));
+    } else {
+      showAllBooks(page);
+    }
+  }
 }
 
 function chosenBook(book) {
@@ -52,7 +106,7 @@ function chosenBook(book) {
       <div class="buttonsUpper">
         <button type="button" class="favorite" id="add-to-favorites">Add to Favorites</button>
         <button type="button" class="delete" id="delete-book">Delete Book</button>
-        </div>
+      </div>
     </div>
     <div class="chosenBookData">
       <p><span>Author:</span> ${book.authorsName}</p>
@@ -68,7 +122,6 @@ function chosenBook(book) {
     </div>
   `;
 
-  // Add event listeners in JavaScript
   document.getElementById('add-to-favorites').addEventListener('click', () => addToFavorites(book));
   document.getElementById('delete-book').addEventListener('click', () => deleteBookFromLibrary(book));
   document.getElementById('plus').addEventListener('click', () => addCopies(book.id));
@@ -104,31 +157,15 @@ function updateBook(book) {
     });
 }
 
-function next() {
-  page += 1;
-  showAllBooks(page);
-}
-
-function previous() {
-  if (page > 1) {
-    page -= 1;
-  }
-  showAllBooks(page);
-}
-
 function addToFavorites(book) {
   const favoritesUrl = "http://localhost:8001/favorites";
 
-  // Fetch the current list of favorite books
   axios.get(favoritesUrl)
     .then(response => {
       const favoriteBooks = response.data;
-
-      // Check if the book is already in the favorites list
       const bookExists = favoriteBooks.some(favBook => favBook.bookName === book.bookName);
 
       if (!bookExists) {
-        // Ensure book properties are correctly accessed
         const favoriteBook = {
           bookName: book.bookName || "No title available",
           authorsName: book.authorsName || "No authors available",
@@ -158,7 +195,7 @@ function deleteBookFromLibrary(book) {
       console.log("Book deleted:", response.data);
       removeBookFromDisplay(book.id);
       addDeleteToHistory(book);
-      deleteBookFromFavorite(book.bookName); // Use book name here
+      deleteBookFromFavorite(book.bookName);
     })
     .catch((error) => {
       console.error("Error deleting book:", error);
@@ -168,12 +205,12 @@ function deleteBookFromLibrary(book) {
 function getCurrentDateTime() {
   const now = new Date();
   const day = String(now.getDate()).padStart(2, '0');
-  const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+  const month = String(now.getMonth() + 1).padStart(2, '0');
   const year = now.getFullYear();
   const hours = String(now.getHours()).padStart(2, '0');
   const minutes = String(now.getMinutes()).padStart(2, '0');
 
-  return `${day} /${month}/${year}, ${hours}:${minutes}`;
+  return `${day}/${month}/${year}, ${hours}:${minutes}`;
 }
 
 function addDeleteToHistory(book) {
@@ -203,16 +240,12 @@ function removeBookFromDisplay(bookId) {
 function deleteBookFromFavorite(bookName) {
   const favoritesUrl = "http://localhost:8001/favorites";
 
-  // Fetch the current list of favorite books
   axios.get(favoritesUrl)
     .then(response => {
       const favoriteBooks = response.data;
-
-      // Find the favorite book with the matching bookName
       const favoriteBook = favoriteBooks.find(favBook => favBook.bookName === bookName);
 
       if (favoriteBook) {
-        // Delete the favorite book using its unique id
         axios.delete(`${favoritesUrl}/${favoriteBook.id}`)
           .then(response => {
             console.log("Book deleted from favorites:", response.data);
@@ -229,4 +262,6 @@ function deleteBookFromFavorite(bookName) {
     });
 }
 
+// Load all books on initial load
 showAllBooks(page);
+

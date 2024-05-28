@@ -2,45 +2,99 @@ const urlBooks = "http://localhost:8001/books";
 const showAllBooksDisplay = document.querySelector(".showAllBooks");
 const chosenBookDisplay = document.querySelector(".chosenBook");
 const paginateButtons = document.querySelector(".paginateButtons");
+const searchInput = document.getElementById("searchInput");
 
 let page = 1;
-let allBooks = []; // Store all books for easy access
+let allBooks = [];
+let filteredBooks = [];
+let isSearching = false;
 
 function showAllBooks(page) {
   axios
     .get(`${urlBooks}?_page=${page}`)
     .then((response) => {
-      allBooks = response.data.data; // Store the fetched books
-
-      // Clear previous results
-      showAllBooksDisplay.innerHTML = "";
-
-      allBooks.forEach((book) => {
-        const bookElement = document.createElement("div");
-        bookElement.classList.add("book");
-
-        // Correctly access book properties
-        const imgSrc = book.imageSmall ? book.imageSmall : "default-image.jpg";
-        const bookName = book.bookName ? book.bookName : "No title available";
-        const authorsName = book.authorsName
-          ? book.authorsName
-          : "No authors available";
-
-        bookElement.innerHTML = `
-          <img src="${imgSrc}" alt="Book Image"/>
-          <p>${authorsName}</p>
-          <p class="bookName">${bookName}</p>
-        `;
-
-        // Add click event listener
-        bookElement.addEventListener("click", () => chosenBook(book));
-
-        showAllBooksDisplay.appendChild(bookElement);
-      });
+      const responseData = response.data;
+      if (Array.isArray(responseData.data)) {
+        const books = responseData.data;
+        displayBooks(books);
+      } else {
+        console.error("Unexpected response structure:", responseData);
+      }
     })
     .catch((error) => {
       console.error("Error fetching books:", error);
     });
+}
+
+function displayBooks(books) {
+  showAllBooksDisplay.innerHTML = "";
+  books.forEach((book) => {
+    const bookElement = document.createElement("div");
+    bookElement.classList.add("book");
+    bookElement.setAttribute("data-id", book.id);
+
+    const imgSrc = book.imageSmall ? book.imageSmall : "default-image.jpg";
+    const bookName = book.bookName ? book.bookName : "No title available";
+    const authorsName = book.authorsName ? book.authorsName : "No authors available";
+
+    bookElement.innerHTML = `
+      <img src="${imgSrc}" alt="Book Image"/>
+      <p>${authorsName}</p>
+      <p class="bookName">${bookName}</p>
+    `;
+
+    bookElement.addEventListener("click", () => chosenBook(book));
+    showAllBooksDisplay.appendChild(bookElement);
+  });
+}
+
+function searchBooks() {
+  const searchString = searchInput.value.toLowerCase();
+  isSearching = true;
+  page = 1; // Reset to first page for search results
+
+  axios.get(urlBooks)
+    .then((response) => {
+      if (Array.isArray(response.data)) {
+        allBooks = response.data;
+        filteredBooks = allBooks.filter(book =>
+          book.bookName && book.bookName.toLowerCase().includes(searchString)
+        );
+        displayBooks(getPaginatedBooks(filteredBooks, page));
+      } else {
+        console.error("Unexpected response structure:", response.data);
+      }
+    })
+    .catch((error) => {
+      console.error("Error fetching books:", error);
+    });
+}
+
+function getPaginatedBooks(books, page) {
+  const booksPerPage = 10;
+  const start = (page - 1) * booksPerPage;
+  const end = start + booksPerPage;
+  return books.slice(start, end);
+}
+
+function next() {
+  page += 1;
+  if (isSearching) {
+    displayBooks(getPaginatedBooks(filteredBooks, page));
+  } else {
+    showAllBooks(page);
+  }
+}
+
+function previous() {
+  if (page > 1) {
+    page -= 1;
+    if (isSearching) {
+      displayBooks(getPaginatedBooks(filteredBooks, page));
+    } else {
+      showAllBooks(page);
+    }
+  }
 }
 
 function chosenBook(book) {
@@ -127,18 +181,6 @@ function updateBook(book) {
     });
 }
 
-function next() {
-  page += 1;
-  showAllBooks(page);
-}
-
-function previous() {
-  if (page > 1) {
-    page -= 1;
-  }
-  showAllBooks(page);
-}
-
 function addToFavorites(book) {
   const favoritesUrl = "http://localhost:8001/favorites";
 
@@ -154,7 +196,6 @@ function addToFavorites(book) {
       );
 
       if (!bookExists) {
-        // Ensure book properties are correctly accessed
         const favoriteBook = {
           bookName: book.bookName || "No title available",
           authorsName: book.authorsName || "No authors available",
@@ -188,7 +229,7 @@ function deleteBookFromLibrary(book) {
       console.log("Book deleted:", response.data);
       removeBookFromDisplay(book.id);
       addDeleteToHistory(book);
-      deleteBookFromFavorite(book.bookName); // Use book name here
+      deleteBookFromFavorite(book.bookName);
     })
     .catch((error) => {
       console.error("Error deleting book:", error);
@@ -203,7 +244,7 @@ function getCurrentDateTime() {
   const hours = String(now.getHours()).padStart(2, "0");
   const minutes = String(now.getMinutes()).padStart(2, "0");
 
-  return `${day} /${month}/${year}, ${hours}:${minutes}`;
+  return `${day}/${month}/${year}, ${hours}:${minutes}`;
 }
 
 function addDeleteToHistory(book) {
@@ -264,5 +305,5 @@ function deleteBookFromFavorite(bookName) {
     });
 }
 
-
 showAllBooks(page);
+

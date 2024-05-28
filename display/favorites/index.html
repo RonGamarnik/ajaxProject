@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Welcome to open libary</title>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Cardo:ital,wght@0,400;0,700;1,400&family=Forum&family=News+Cycle:wght@400;700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <img src="/display/images/openlibrary-logo-tighter.svg" alt="Logo"/>
-        <nav >
-            <ul>
-                <li><a href="/display/home/index.html">HOME</a></li>
-                <li><a href="/display/favorites/index.html">FAVORITES</a></li>
-                <li><a href="/display/history/history.html">HISTORY</a></li>
-                <li><a href="/display/management/management.html">ADD BOOK TO LIBRARY</a></li>
-            </ul>
-            
-        </div>
-        
-    </nav>
-</header>
-<main>
-    <div class="favorites"></div>
-</main>
-<script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+      <div class="logo">
+        <img src="/display/images/openlibrary-logo-tighter.svg" alt="Logo" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/display/home/index.html">HOME</a></li>
+          <li><a href="/display/favorites/index.html">FAVORITES</a></li>
+          <li><a href="/display/history/history.html">HISTORY</a></li>
+          <li>
+            <a href="/display/management/management.html"
+              >ADD BOOK TO LIBRARY</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="favorites"></div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
 
-<script src="index.js"></script>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>

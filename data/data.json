@@ -22,7 +22,7 @@
       "imageLarge": "http://books.google.com/books/content?id=Hlo_aH173uoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "categories": "Horses",
       "isbn": "MINN:31951D02060383X",
-      "numCopies": 5
+      "numCopies": 6
     },
     {
       "id": "b427",
@@ -58,7 +58,7 @@
       "imageLarge": "http://books.google.com/books/content?id=Hn234i30NV0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "categories": "Asia",
       "isbn": "UCSD:31822041815861",
-      "numCopies": 5
+      "numCopies": 4
     },
     {
       "id": "4908",
@@ -541,5 +541,36 @@
       "date": "27/05/2024, 15:23"
     }
   ],
-  "favorites": []
+  "favorites": [
+    {
+      "id": "999b",
+      "bookName": "Hippopathology: a Systematic Treatise on the Disorders and Lameness of the Horse",
+      "authorsName": "William Percivall",
+      "imageSmall": "http://books.google.com/books/content?id=Hlo_aH173uoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+    },
+    {
+      "id": "487d",
+      "bookName": "The Sacred Heart: a Correspondence Between ... Archbishop Manning, D.D., and the Rev. A. Nicholson, LL.D., as it Appeared in the “Guardian” Newspaper, Sept. 17th. With Notes for English Readers ... Second Edition",
+      "authorsName": "Henry Edward Manning",
+      "imageSmall": "http://books.google.com/books/content?id=Bj-be5_C5NAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+    },
+    {
+      "id": "e605",
+      "bookName": "The Christian Kingdom. A Sermon, Etc",
+      "authorsName": "Henry James Coleridge",
+      "imageSmall": "http://books.google.com/books/content?id=XHyvKN3qJ5wC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+    },
+    {
+      "id": "6e30",
+      "bookName": "God or Baal: a sermon, etc",
+      "authorsName": "Joseph SLATER (Assistant Priest at the Church of Saint Lawrence Southampton.)",
+      "imageSmall": "http://books.google.com/books/content?id=8m_Yf-tS4TEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+    },
+    {
+      "id": "4401",
+      "bookName": "Morning and Evening Sacrifice: a handbook for domestic worship",
+      "authorsName": "James Dickerson DAVIES",
+      "imageSmall": "http://books.google.com/books/content?id=xbVE3PulfKkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+    }
+  ]
 }

@@ -1,4 +1,9 @@
 /* Table styles */
+header{
+  font-family: "Forum", serif;
+  font-weight: 600;
+  font-style: normal;
+}
 table {
   width: 90%;
   margin: 20px auto;

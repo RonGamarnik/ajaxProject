@@ -9,7 +9,7 @@ async function fetchBooksFromGoogle(query, page) {
     return [];
   }
 
-  const startIndex = 1;
+  const startIndex = (page - 1) * maxResults;
   const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${API_KEY}&startIndex=${startIndex}&maxResults=${maxResults}`;
   try {
     const response = await axios.get(url);
@@ -43,8 +43,8 @@ async function addBookToLocalServer(book) {
       : "No categories available",
     isbn: book.volumeInfo.industryIdentifiers
       ? book.volumeInfo.industryIdentifiers
-          .map((id) => id.identifier)
-          .join(", ")
+        .map((id) => id.identifier)
+        .join(", ")
       : "No ISBN available",
     numCopies: 5, // Default number of copies
   };
@@ -52,6 +52,7 @@ async function addBookToLocalServer(book) {
   try {
     const response = await axios.post(urlBooks, newBook);
     console.log("Book added:", response.data);
+    addCreateToHistory(newBook); // Pass the newly created book object with correct structure
   } catch (error) {
     console.error(
       "Error adding book to local server:",
@@ -132,6 +133,34 @@ async function fetchAndDisplayBooks() {
 document
   .getElementById("fetch-books-button")
   .addEventListener("click", fetchAndDisplayBooks);
+
+function addCreateToHistory(book) {
+  const historyUrl = "http://localhost:8001/history";
+  const historyBook = {
+    bookName: book.bookName || "No title available",
+    isbn: book.isbn || "No ISBN available",
+    action: "Create",
+    date: getCurrentDateTime()
+  };
+  axios.post(historyUrl, historyBook)
+    .then(response => {
+      console.log("Book added to history:", response.data);
+    })
+    .catch(error => {
+      console.error("There was an error adding the book to history:", error);
+    });
+}
+
+function getCurrentDateTime() {
+  const now = new Date();
+  const day = String(now.getDate()).padStart(2, '0');
+  const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+  const year = now.getFullYear();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+
+  return `${day}/${month}/${year}, ${hours}:${minutes}`;
+}
 
 // Initial fetch and display
 fetchAndDisplayBooks();

@@ -21,9 +21,6 @@ header {
   font-family: "Forum", serif;
   font-weight: 600;
   font-style: normal;
-  font-family: "Forum", serif;
-  font-weight: 600;
-  font-style: normal;
 }
 
 .logo {
@@ -38,9 +35,13 @@ header {
 }
 nav {
   padding-top: 0.35em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 nav ul {
   list-style-type: none;
+  padding-top: 0.68em;
 }
 
 nav ul li {
@@ -54,7 +55,19 @@ nav ul li a {
   font-weight: bold;
   transition: color 0.3s ease;
 }
-
+nav input{
+  display: block;
+  width: 30%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  border-radius: 5px;
+  font-family: "Vollkorn", serif;
+  font-optical-sizing: auto;
+justify-self: flex-end;
+}
 nav ul li a:hover {
   color: #0e3f72;
 }
@@ -62,6 +75,9 @@ nav ul li a:hover {
 /* Main content styles */
 main {
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 0;
 }
 
 .search {
@@ -84,7 +100,7 @@ main {
   border-radius: 10px;
   box-shadow: 0 0.4em rgba(77, 75, 75, 0.1);
   padding: 20px;
-  width: 40%;
+  width: 100%;
 }
 .allBooksCard {
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
@@ -92,8 +108,11 @@ main {
 }
 .showAllBooks {
   display: flex;
-  flex-direction: column;
-  gap: 1em;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.imgAndData{
+  display: flex;
 }
 .imgAndName {
   width: 40%;
@@ -107,15 +126,17 @@ main {
   padding-bottom: 0.7em;
 }
 .chosenBook {
-  position: sticky;
-  top: 1em;
-  height: fit-content;
-  width: 100%;
-  display: flex;
-  background-color: #cad4eeb1;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
-    rgba(17, 17, 26, 0.05) 0px 8px 32px;
-    opacity: 0;
+  width: 60%;
+  display: none;
+  visibility: hidden;
+  background-color: #adc0efe2;
+  opacity: 0;
+  padding: 0.7em 2.5em;
+  position: fixed;
+  top: 3em;
+  right: 17em;
+  overflow-y: auto;
+  transition: opacity 0.3s, visibility 0.3s, display 0.3s;
 }
 .chosenBook p {
   color: #272727;
@@ -123,12 +144,14 @@ main {
   font-weight: 400;
   font-style: normal;
 }
+.chosenBook h3{
+ text-align: center;
+padding: 1.5em;
+}
 .chosenBookData {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  gap: 0.5em;
-  padding-left: 1em;
+  /* padding-top: 6em; */
 }
 .chosenBookData button {
   background-color: #eee;
@@ -160,10 +183,6 @@ main {
   cursor: auto;
   color: grey;
 }
-main {
-  display: flex;
-  gap: 5em;
-}
 .search {
   display: flex;
 }
@@ -172,15 +191,30 @@ main {
   padding: 20px;
   background-color: #fffefe;
   box-shadow: 0 0.4rem #b5b1b1;
+  width: calc(20% - 20px);
+  margin: 10px;
+  height: 340px; /* Set a fixed height for all books */
+  overflow: hidden;
+  transition: 0.2s;
+
+}
+.book:hover{
+  transform:scale(1.1) ;
 }
 
 .book p {
-  width: 60%;
   padding-block: 0.5em;
+  font-size: small;
   font-family: "Tinos", serif;
   font-weight: 400;
   font-style: italic;
   color: #333;
+}
+.book img{
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border: 1px solid rgba(118, 118, 142, 0.781);
 }
 .book .bookName {
   font-family: "Vollkorn", serif;
@@ -188,6 +222,10 @@ main {
   font-weight: 700;
   font-style: normal;
   color: #050404;
+}
+.book .bookName:hover {
+  overflow: visible;
+  transition: 0.3 2s ease-in-out;
 }
 .book:hover {
   background-color: hsla(0, 100%, 100%, 0.475);
@@ -221,4 +259,44 @@ span {
   font-optical-sizing: auto;
   font-style: normal;
 }
-
+.buttonsUpper {
+  display: flex;
+  align-items: center;
+  padding: 1em 0 1em 0;
+  gap: 0.5em;
+  justify-content: flex-start;
+}
+.buttonsUpper button {
+  font-family: "Tinos", serif;
+  font-weight: bold;
+  font-style: italic;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  font-size: 1rem;
+  width: 4em;
+  border-radius: 0;
+  color: rgb(86, 83, 83);
+  box-shadow: none;
+  cursor: pointer;
+}
+.buttonsUpper button:hover:not(:disabled) {
+  color: rgb(44, 45, 76);
+  cursor: pointer;
+  background-color: transparent;
+  text-decoration: underline;
+  text-shadow: none;
+}
+.close {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 900;
+  left: 36em;
+  bottom: 0.1em;
+  font-size: larger;
+}
+#delete, #forward, #back {
+  cursor: pointer;
+}

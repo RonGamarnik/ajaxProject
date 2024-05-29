@@ -217,26 +217,37 @@ span {
   padding: 20px;
   background-color: #fffefe;
   box-shadow: 0 0.4rem #b5b1b1;
-  width: 20%;
+  width: calc(30% - 20px);
+  margin: 10px;
+  height: 330px;
+  overflow: hidden;
+  transition: 1s;
 }
-
+.favoriteBook img{
+  width: 100%;
+  height: auto;
+}
 .favoriteBook p {
   width: fit-content;
   padding-block: 0.5em;
   font-family: "Tinos", serif;
   font-weight: 400;
+  font-size: small;
   font-style: italic;
   color: #333;
 }
-.favoriteBook .bookName {
+.favoriteBook h3 {
   font-family: "Vollkorn", serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
+  font-size: smaller;
   color: #050404;
 }
 .favoriteBook:hover {
   background-color: hsla(0, 100%, 100%, 0.475);
   color: white;
   cursor: pointer;
+  transform: scale(1.1);
+  z-index: 9999;
 }

@@ -182,3 +182,6 @@ main {
   font-optical-sizing: auto;
   font-style: normal;
 }
+#next,#previous {
+  cursor: pointer;
+}

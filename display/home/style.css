@@ -88,12 +88,12 @@ main {
 }
 .allBooksCard {
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
-  rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
 .showAllBooks {
   display: flex;
   flex-wrap: wrap;
-  align-items: center; 
+  align-items: center;
 }
 .imgAndName {
   width: 40%;
@@ -114,9 +114,11 @@ main {
   rgba(17, 17, 26, 0.05) 0px 8px 32px; */
   opacity: 0;
   padding: 3em;
-  position: absolute;
+  height: 80vh;
+  position: fixed;
   top: 3em;
   right: 17em;
+  overflow-y: auto;
 }
 .chosenBook p {
   color: #272727;
@@ -169,8 +171,8 @@ main {
   padding: 20px;
   background-color: #fffefe;
   box-shadow: 0 0.4rem #b5b1b1;
-  width: calc(20% - 20px); 
-  margin: 10px; 
+  width: calc(20% - 20px);
+  margin: 10px;
   height: 340px; /* Set a fixed height for all books */
   overflow: hidden;
 }
@@ -190,7 +192,7 @@ main {
   font-style: normal;
   color: #050404;
 }
-.book .bookName:hover{
+.book .bookName:hover {
   overflow: visible;
   transition: 0.3 2s ease-in-out;
 }
@@ -229,9 +231,9 @@ span {
 .buttonsUpper {
   display: flex;
   align-items: center;
-  padding: 1em 0 1em 0;;
+  padding: 1em 0 1em 0;
   gap: 0.5em;
-  justify-content:flex-start;
+  justify-content: flex-start;
 }
 .buttonsUpper button {
   font-family: "Tinos", serif;
@@ -242,25 +244,24 @@ span {
   padding: 0;
   font-size: 1rem;
   width: 4em;
-  border-radius:0;
+  border-radius: 0;
   color: rgb(86, 83, 83);
   box-shadow: none;
   cursor: pointer;
 }
-.buttonsUpper button:hover:not(:disabled){
+.buttonsUpper button:hover:not(:disabled) {
   color: rgb(44, 45, 76);
   cursor: pointer;
   background-color: transparent;
   text-decoration: underline;
   text-shadow: none;
 }
-.close{
-position: relative;
-background-color: transparent;
-border: none;
-cursor: pointer;
-font-weight: 900;
+.close {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 900;
   left: 51em;
   bottom: 3em;
-
 }

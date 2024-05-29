@@ -40,8 +40,7 @@
     </header>
     <main>
       <div class="search">
-        <input id="book-search" type="search" placeholder="Enter Book name" />
-        <button id="fetch-books-button" type="submit">Search</button>
+        <input id="book-search" oninput="searchWithDebounce()" type="search" placeholder="Enter Book name" />
       </div>
       <div id="books"></div>
       <div class="pagination">

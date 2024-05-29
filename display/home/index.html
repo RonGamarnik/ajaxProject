@@ -56,8 +56,7 @@
     </header>
     <main>
       <div class="allBooksCard">
-        <input type="text" id="searchInput" placeholder="Search for books..." />
-        <button onclick="searchBooks()">Search</button>
+        <input type="text" oninput="searchBooks()" id="searchInput" placeholder="Search for books..." />
 
         <div class="showAllBooks"></div>
         <div class="paginateButtons">

@@ -3,6 +3,7 @@ const showAllBooksDisplay = document.querySelector(".showAllBooks");
 const chosenBookDisplay = document.querySelector(".chosenBook");
 const searchInput = document.getElementById("searchInput");
 const paginateButtons = document.querySelector(".paginateButtons")
+const header = document.querySelector("header");
 
 let page = 1;
 let allBooks = [];
@@ -129,13 +130,7 @@ function chosenBook(book) {
     </div>
     `;
     const closeButton = document.querySelector(".close");
-    closeButton.addEventListener("click", () => {
-      chosenBookDisplay.style.opacity = "0";
-      chosenBookDisplay.style.zIndex = "-1";
-      showAllBooksDisplay.style.opacity = "1";
-      header.style.opacity = "1";
-      paginateButtons.style.opacity = "1";
-    });
+    closeButton.addEventListener("click", close);
 
   // Add event listeners in JavaScript
   document
@@ -146,12 +141,18 @@ function chosenBook(book) {
     .addEventListener("click", () => deleteBookFromLibrary(book));
   document
     .getElementById("plus")
-    .addEventListener("click", () => addCopies(book.id));
+    .addEventListener("click", addCopies(book.id));
   document
     .getElementById("minus")
-    .addEventListener("click", () => removeCopies(book.id));
+    .addEventListener("click",removeCopies(book.id));
 }
-
+function close() {
+  chosenBookDisplay.style.opacity = "0";
+  chosenBookDisplay.style.zIndex = "-1";
+  showAllBooksDisplay.style.opacity = "1";
+  header.style.opacity = "1";
+  paginateButtons.style.opacity = "1";
+}
 function addCopies(bookId) {
   const book = allBooks.find((b) => b.id === bookId);
   if (book) {
@@ -182,14 +183,15 @@ function updateBook(book) {
 }
 
 function addToFavorites(book) {
+  close();
   const favoritesUrl = "http://localhost:8001/favorites";
-
+  
   // Fetch the current list of favorite books
   axios
     .get(favoritesUrl)
     .then((response) => {
       const favoriteBooks = response.data;
-
+      
       // Check if the book is already in the favorites list
       const bookExists = favoriteBooks.some(
         (favBook) => favBook.bookName === book.bookName
@@ -201,11 +203,11 @@ function addToFavorites(book) {
           authorsName: book.authorsName || "No authors available",
           imageSmall: book.imageSmall || "No image available",
         };
-
+        
         axios
-          .post(favoritesUrl, favoriteBook)
-          .then((response) => {
-            console.log("Book added to favorites:", response.data);
+        .post(favoritesUrl, favoriteBook)
+        .then((response) => {
+          console.log("Book added to favorites:", response.data);
           })
           .catch((error) => {
             console.error(
@@ -230,6 +232,7 @@ function deleteBookFromLibrary(book) {
       removeBookFromDisplay(book.id);
       addDeleteToHistory(book);
       deleteBookFromFavorite(book.bookName);
+      close()
     })
     .catch((error) => {
       console.error("Error deleting book:", error);
@@ -277,33 +280,33 @@ function deleteBookFromFavorite(bookName) {
 
   // Fetch the current list of favorite books
   axios
-    .get(favoritesUrl)
-    .then((response) => {
-      const favoriteBooks = response.data;
-
-      // Find the favorite book with the matching bookName
-      const favoriteBook = favoriteBooks.find(
-        (favBook) => favBook.bookName === bookName
-      );
-
-      if (favoriteBook) {
-        // Delete the favorite book using its unique id
-        axios
-          .delete(`${favoritesUrl}/${favoriteBook.id}`)
-          .then((response) => {
-            console.log("Book deleted from favorites:", response.data);
-          })
-          .catch((error) => {
-            console.error("Error deleting book from favorites:", error);
-          });
-      } else {
-        console.log("Book not found in favorites");
-      }
-    })
-    .catch((error) => {
-      console.error("There was an error fetching the favorites list:", error);
-    });
+  .get(favoritesUrl)
+  .then((response) => {
+    const favoriteBooks = response.data;
+    
+    // Find the favorite book with the matching bookName
+    const favoriteBook = favoriteBooks.find(
+      (favBook) => favBook.bookName === bookName
+    );
+    
+    if (favoriteBook) {
+      // Delete the favorite book using its unique id
+      axios
+      .delete(`${favoritesUrl}/${favoriteBook.id}`)
+      .then((response) => {
+        console.log("Book deleted from favorites:", response.data);
+      })
+      .catch((error) => {
+        console.error("Error deleting book from favorites:", error);
+      });
+    } else {
+      console.log("Book not found in favorites");
+    }
+  })
+  .catch((error) => {
+    console.error("There was an error fetching the favorites list:", error);
+  });
 }
 
 showAllBooks(page);
-
+close();

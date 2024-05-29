@@ -12,6 +12,11 @@
       href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Cardo:ital,wght@0,400;0,700;1,400&family=Forum&family=News+Cycle:wght@400;700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
   </head>
   <body>
     <header>
@@ -39,6 +44,12 @@
           <th>Action</th>
         </tr>
       </table>
+      <div class="pagination">
+        <i id="back" class="fa-solid fa-angles-left" onclick="previousPage()">"</i>
+        <i id="forward" class="fa-solid fa-angles-right" onclick="nextPage()">"</i>
+        </div>
+
+
     </main>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="index.js"></script>

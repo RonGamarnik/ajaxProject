@@ -4,6 +4,7 @@ let page = 1;
 const paginationContainer = document.querySelector(".pagination");
 const loader = document.querySelector(".loader");
 loader.style.display = "none";
+let lastPage = 0;
 
 async function fetchBooksFromGoogle(query, page) {
   if (!query) {
@@ -101,8 +102,6 @@ async function displayBooks(books) {
   // Add pagination buttons
   const buttonPrevious = document.getElementById("previous");
   const buttonNext = document.getElementById("next");
-  buttonPrevious.innerHTML = "Previous";
-  buttonNext.innerHTML = "Next";
   paginationContainer.style.opacity = "1";
 
   buttonPrevious.addEventListener("click", () => {
@@ -113,7 +112,9 @@ async function displayBooks(books) {
   });
 
   buttonNext.addEventListener("click", () => {
+    if(page=lastPage){return;}
     page += 1;
+    lastPageCalc()
     fetchAndDisplayBooks();
   });
   loader.style.display = "none";
@@ -169,6 +170,17 @@ function getCurrentDateTime() {
 
   return `${day}/${month}/${year}, ${hours}:${minutes}`;
 }
+async function lastPageCalc() {
+  try {
+      const response = await axios.get(urlBooks);
+      const bookEntries = response.data;
+       lastPage = Math.ceil(bookEntries.length / 10);
+      console.log(lastPage);
+  } catch (error) {
+      console.error("Error fetching Books:", error);
+  }
+}
 
 // Initial fetch and display
 fetchAndDisplayBooks();
+lastPageCalc()

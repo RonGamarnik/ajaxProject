@@ -5,6 +5,7 @@ const searchInput = document.getElementById("searchInput");
 const paginateButtons = document.querySelector(".paginateButtons");
 const header = document.querySelector("header");
 const allBookCard = document.querySelector(".allBooksCard")
+let lastPage = 0;
 
 let page = 1;
 let allBooks = [];
@@ -107,6 +108,9 @@ function getPaginatedBooks(books, page) {
 }
 
 function next() {
+  if(page === lastPage) {
+    return;
+  }
   page += 1;
   if (isSearching) {
     displayBooks(getPaginatedBooks(filteredBooks, page));
@@ -136,37 +140,40 @@ function chosenBook(book) {
   paginateButtons.style.opacity = "0.2";
 
   chosenBookDisplay.innerHTML = `
-  <div class="imgAndName">
-  <button type="button" class="close" id="close">X</button>  
+  <i class="fa-regular fa-circle-xmark close"></i>
   <h3 id="name">${book.bookName}</h3>
-  <img src="${book.imageLarge}" alt="Book Image" />
-  <div class="buttonsUpper">
-  <button type="button" class="favorite" id="add-to-favorites">Add to Favorites</button>
-  <button type="button" class="delete" id="delete-book">Delete Book</button>
-  </div>
-  </div>
+  <div class="imgAndData">
+    <div class="imgAndName">
+      <img src="${book.imageLarge}" alt="Book Image" />
+      <div class="buttonsUpper">
+        <i  id="addToFav" class="fa-regular fa-star"></i>
+        <i class="fa-regular fa-trash-can" id="delete"></i> 
+      </div>
+    </div>
+  
     <div class="chosenBookData">
-    <p><span>Author:</span> ${book.authorsName}</p>
-    <p><span>Number of pages:</span> ${book.numPages}</p>
-    <p><span>Description:</span> ${book.shortDescription}</p>
-    <p><span>Categories:</span> ${book.categories}</p>
-    <p><span>Number of copies:</span> ${book.numCopies}</p>
-    <p><span>ISBN:</span> ${book.isbn}</p>
-    <div class="buttonsForCopies">
-    <button id="plus">+</button>
-    <button id="minus">-</button>
+      <p><span>Author:</span> ${book.authorsName}</p>
+      <p><span>Number of pages:</span> ${book.numPages}</p>
+      <p><span>Description:</span> ${book.shortDescription}</p>
+      <p><span>Categories:</span> ${book.categories}</p>
+      <p><span>Number of copies:</span> ${book.numCopies}</p>
+      <p><span>ISBN:</span> ${book.isbn}</p>
+      <div class="buttonsForCopies">
+        <button id="plus">+</button>
+        <button id="minus">-</button>
+      </div>
     </div>
-    </div>
+  </div>
     `;
   const closeButton = document.querySelector(".close");
   closeButton.addEventListener("click", close);
 
   // Add event listeners in JavaScript
   document
-    .getElementById("add-to-favorites")
+    .getElementById("addToFav")
     .addEventListener("click", () => addToFavorites(book));
   document
-    .getElementById("delete-book")
+    .getElementById("delete")
     .addEventListener("click", () => deleteBookFromLibrary(book));
   document
     .getElementById("plus")
@@ -190,6 +197,7 @@ async function addCopies(bookId) {
     const response = await axios.get(`${urlBooks}/${bookId}`);
     const bookToUpdate = response.data;
     bookToUpdate.numCopies += 1;
+    addCopyAddToHistory(bookToUpdate);
     updateBook(bookToUpdate);
   } catch (error) {
     console.log(error);
@@ -200,6 +208,7 @@ async function removeCopies(bookId) {
     const response = await axios.get(`${urlBooks}/${bookId}`);
     const bookToUpdate = response.data;
     bookToUpdate.numCopies -= 1;
+    reduceCopyAddToHistory(bookToUpdate);
     updateBook(bookToUpdate);
   } catch (error) {
     console.log(error);
@@ -219,6 +228,7 @@ function updateBook(bookToUpdate) {
 
 function addToFavorites(book) {
   close();
+  
   const favoritesUrl = "http://localhost:8001/favorites";
 
   // Fetch the current list of favorite books
@@ -234,11 +244,13 @@ function addToFavorites(book) {
 
       if (!bookExists) {
         const favoriteBook = {
+          id:book.id,
           bookName: book.bookName || "No title available",
           authorsName: book.authorsName || "No authors available",
           imageSmall: book.imageSmall || "No image available",
         };
-
+        const starIcon = document.getElementById("addToFav");
+        starIcon.classList.add("fa-solid");
         axios
           .post(favoritesUrl, favoriteBook)
           .then((response) => {
@@ -252,6 +264,7 @@ function addToFavorites(book) {
           });
       } else {
         console.log("Book already exists in favorites");
+        deleteBookFromFavorite(book.id);
       }
     })
     .catch((error) => {
@@ -259,19 +272,17 @@ function addToFavorites(book) {
     });
 }
 
-function deleteBookFromLibrary(book) {
-  axios
-    .delete(`${urlBooks}/${book.id}`)
-    .then((response) => {
-      console.log("Book deleted:", response.data);
-      removeBookFromDisplay(book.id);
-      addDeleteToHistory(book);
-      deleteBookFromFavorite(book.bookName);
-      close();
-    })
-    .catch((error) => {
-      console.error("Error deleting book:", error);
-    });
+async function deleteBookFromLibrary(book) {
+  try {
+    const response = await axios.delete(`${urlBooks}/${book.id}`);
+    console.log("Book deleted:", response.data);
+    removeBookFromDisplay(book.id);
+    addDeleteToHistory(book);
+    await deleteBookFromFavorite(book.id); 
+    close();
+  } catch (error) {
+    console.error("Error deleting book:", error);
+  }
 }
 
 function getCurrentDateTime() {
@@ -310,37 +321,29 @@ function removeBookFromDisplay(bookId) {
   }
 }
 
-function deleteBookFromFavorite(bookName) {
+async function deleteBookFromFavorite(bookId) {
   const favoritesUrl = "http://localhost:8001/favorites";
 
-  // Fetch the current list of favorite books
-  axios
-    .get(favoritesUrl)
-    .then((response) => {
-      const favoriteBooks = response.data;
+  try {
+    // Fetch the current list of favorite books
+    const response = await axios.get(favoritesUrl);
+    const favoriteBooks = response.data;
 
-      // Find the favorite book with the matching bookName
-      const favoriteBook = favoriteBooks.find(
-        (favBook) => favBook.bookName === bookName
-      );
+    // Find the favorite book with the matching ID
+    const favoriteBook = favoriteBooks.find(
+      (favBook) => favBook.id === bookId
+    );
 
-      if (favoriteBook) {
-        // Delete the favorite book using its unique id
-        axios
-          .delete(`${favoritesUrl}/${favoriteBook.id}`)
-          .then((response) => {
-            console.log("Book deleted from favorites:", response.data);
-          })
-          .catch((error) => {
-            console.error("Error deleting book from favorites:", error);
-          });
-      } else {
-        console.log("Book not found in favorites");
-      }
-    })
-    .catch((error) => {
-      console.error("There was an error fetching the favorites list:", error);
-    });
+    if (favoriteBook) {
+      // Delete the favorite book using its unique ID
+      const deleteResponse = await axios.delete(`${favoritesUrl}/${favoriteBook.id}`);
+      console.log("Book deleted from favorites:", deleteResponse.data);
+    } else {
+      console.log("Book not found in favorites");
+    }
+  } catch (error) {
+    console.error("There was an error fetching or deleting the favorite book:", error);
+  }
 }
 async function loaderDisplay(example) {
   const loader = document.querySelector(".loader");
@@ -352,7 +355,52 @@ async function loaderDisplay(example) {
     loader.style.display = "none";
   }
 }
+function addCopyAddToHistory(book) {
+  const historyUrl = "http://localhost:8001/history";
+  const historyBook = {
+    bookName: book.bookName || "No title available",
+    isbn: book.isbn || "No isbn available",
+    action: "copy added",
+    date: getCurrentDateTime(),
+  };
+  axios
+    .post(historyUrl, historyBook)
+    .then((response) => {
+      console.log("Book added to history:", response.data);
+    })
+    .catch((error) => {
+      console.error("There was an error adding the book to history:", error);
+    });
+}function reduceCopyAddToHistory(book) {
+  const historyUrl = "http://localhost:8001/history";
+  const historyBook = {
+    bookName: book.bookName || "No title available",
+    isbn: book.isbn || "No isbn available",
+    action: "copy reduced",
+    date: getCurrentDateTime(),
+  };
+  axios
+    .post(historyUrl, historyBook)
+    .then((response) => {
+      console.log("Book added to history:", response.data);
+    })
+    .catch((error) => {
+      console.error("There was an error adding the book to history:", error);
+    });
+}
+async function lastPageCalc() {
+  try {
+      const response = await axios.get(urlBooks);
+      const bookEntries = response.data;
+       lastPage = Math.ceil(bookEntries.length / 10);
+      console.log(lastPage);
+  } catch (error) {
+      console.error("Error fetching Books:", error);
+  }
+}
+
 
 // Usage
 loaderDisplay(() => showAllBooks(page));
 loaderDisplay(() => searchBooks());
+lastPageCalc()

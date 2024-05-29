@@ -1,90 +1,6 @@
 {
   "books": [
     {
-      "id": "7f5a",
-      "bookName": "Hippopathology: a Systematic Treatise on the Disorders and Lameness of the Horse",
-      "authorsName": "William Percivall",
-      "numPages": 268,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=Hlo_aH173uoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=Hlo_aH173uoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "Horses",
-      "isbn": "MINN:31951D02060383X",
-      "numCopies": 6
-    },
-    {
-      "id": "b427",
-      "bookName": "Man mortal: being a reply to Mr. F. W. Grant's “Life and Immortality,” etc",
-      "authorsName": "Robert ROBERTS (Christadelphian.)",
-      "numPages": 130,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=gzhD6yRJaqkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=gzhD6yRJaqkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "No categories available",
-      "isbn": "BL:A0022673926",
-      "numCopies": 5
-    },
-    {
-      "id": "4908",
-      "bookName": "God or Baal: a sermon, etc",
-      "authorsName": "Joseph SLATER (Assistant Priest at the Church of Saint Lawrence Southampton.)",
-      "numPages": 14,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=8m_Yf-tS4TEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=8m_Yf-tS4TEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "No categories available",
-      "isbn": "BL:A0021806083",
-      "numCopies": 5
-    },
-    {
-      "id": "65e4",
-      "bookName": "Jesus versus Christianity. By a Cantab",
-      "authorsName": "CANTAB.",
-      "numPages": 34,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=YM_21yyfPNUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=YM_21yyfPNUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "No categories available",
-      "isbn": "BL:A0022696523",
-      "numCopies": -4
-    },
-    {
-      "id": "d33d",
-      "bookName": "The Christian Kingdom. A Sermon, Etc",
-      "authorsName": "Henry James Coleridge",
-      "numPages": 28,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=XHyvKN3qJ5wC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=XHyvKN3qJ5wC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "No categories available",
-      "isbn": "BL:A0021761125",
-      "numCopies": -19
-    },
-    {
-      "id": "7e88",
-      "bookName": "The Wants and Means of India. A Paper, Etc",
-      "authorsName": "Dadabhai Naoroji",
-      "numPages": 12,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=gQo24ZEO67oC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=gQo24ZEO67oC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "No categories available",
-      "isbn": "BL:A0021869697",
-      "numCopies": 3
-    },
-    {
-      "id": "732d",
-      "bookName": "Morning and Evening Sacrifice: a handbook for domestic worship",
-      "authorsName": "James Dickerson DAVIES",
-      "numPages": 72,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=xbVE3PulfKkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=xbVE3PulfKkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "No categories available",
-      "isbn": "BL:A0021939451",
-      "numCopies": 0
-    },
-    {
       "id": "2167",
       "bookName": "A Shaker's Answer to the Oft-repeated Question, \"What Would Become of the World If All Should Become Shakers?\"",
       "authorsName": "Richard W. Pelham",
@@ -94,90 +10,6 @@
       "imageLarge": "http://books.google.com/books/content?id=XA1CN22onEgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "categories": "Celibacy",
       "isbn": "UOM:69015000001103",
-      "numCopies": 5
-    },
-    {
-      "id": "5b21",
-      "bookName": "A Defence of the Record of Revelation Agaisnt \"Christian Theology and Modern Scepticism.\".",
-      "authorsName": "John Du Boulay",
-      "numPages": 36,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=GOUbAbq33q4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=GOUbAbq33q4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "No categories available",
-      "isbn": "BL:A0021970351",
-      "numCopies": 4
-    },
-    {
-      "id": "2ff6",
-      "bookName": "A Devout Exercise in Honour of the Ever Blessed Virgin Mother of God, Mary ... From the Writings of Saint Bonaventure. In Latin and English",
-      "authorsName": "No authors available",
-      "numPages": 132,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=YW-nPotMW2kC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=YW-nPotMW2kC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "No categories available",
-      "isbn": "BL:A0021948068",
-      "numCopies": 6
-    },
-    {
-      "id": "c58e",
-      "bookName": "מחזור למועדי בני ישראל",
-      "authorsName": "No authors available",
-      "numPages": 442,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=Sme1zl_nXP0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=Sme1zl_nXP0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "No categories available",
-      "isbn": "NLI:1993911-20",
-      "numCopies": 5
-    },
-    {
-      "id": "218b",
-      "bookName": "Revised Statutes of the United States, Passed at the First Session of the Forty-third Congress, 1873-74; Embracing the Statutes of the United States, General and Permanent in Their Nature, in Force an the First Day of December, One Thoosand Eight Hundred and Seventy-three, as Revised and Consolidated by Commissioners Appointed Under an Act of Congress (etc.). Mit 2 Suppl.-Vol",
-      "authorsName": "[Anonymus AC10343482]",
-      "numPages": 1456,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=8Prhyw0MJWoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=8Prhyw0MJWoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "No categories available",
-      "isbn": "ONB:+Z229303906",
-      "numCopies": 5
-    },
-    {
-      "id": "94c0",
-      "bookName": "English Proverbs and Proverbial Phrases",
-      "authorsName": "William Carew Hazlitt",
-      "numPages": 550,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=-bs1K40V8gUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=-bs1K40V8gUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "Proverbs, English",
-      "isbn": "ONB:+Z254007501",
-      "numCopies": 5
-    },
-    {
-      "id": "6f48",
-      "bookName": "Israel as a Pluralist State",
-      "authorsName": "No authors available",
-      "numPages": 112,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=UaIvAQAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=UaIvAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "categories": "Israelis",
-      "isbn": "STANFORD:36105132297347",
-      "numCopies": 5
-    },
-    {
-      "id": "7fa9",
-      "bookName": "A Dictionary of Music and Musicians",
-      "authorsName": "George Grove",
-      "numPages": 784,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=5I_q52-HJCYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=5I_q52-HJCYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "Music",
-      "isbn": "UCI:31970001387718",
       "numCopies": 5
     },
     {
@@ -193,54 +25,6 @@
       "numCopies": 5
     },
     {
-      "id": "f479",
-      "bookName": "A manual of the mollusca",
-      "authorsName": "S. P. Woodward",
-      "numPages": 748,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=jwXctWt0uDIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=jwXctWt0uDIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "No categories available",
-      "isbn": "BSB:BSB11338997",
-      "numCopies": 4
-    },
-    {
-      "id": "b732",
-      "bookName": "מחזור",
-      "authorsName": "No authors available",
-      "numPages": 428,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=K8VRrk_Uu34C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=K8VRrk_Uu34C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "No categories available",
-      "isbn": "NLI:1993907-20",
-      "numCopies": 5
-    },
-    {
-      "id": "046b",
-      "bookName": "French-English and English-French Dictionary, Comprising All the Improvements of the Latest London and Paris Editions, with the Pronunciation of Each Word, According to the Dictionary of the Abbé Tardy",
-      "authorsName": "Abel Boyer",
-      "numPages": 798,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=SxME5j7U4QEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=SxME5j7U4QEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "English language",
-      "isbn": "UIUC:30112088352577",
-      "numCopies": 5
-    },
-    {
-      "id": "e21d",
-      "bookName": "Punch",
-      "authorsName": "No authors available",
-      "numPages": 658,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=8U9Dh-Vb_N0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=8U9Dh-Vb_N0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "English wit and humor",
-      "isbn": "WISC:89072344179",
-      "numCopies": 5
-    },
-    {
       "id": "525c",
       "bookName": "A Tale for Each Month, 1961",
       "authorsName": "Dov Noy",
@@ -253,18 +37,6 @@
       "numCopies": 5
     },
     {
-      "id": "cfbb",
-      "bookName": "Chambers's Journal of Popular Literature, Science and Arts",
-      "authorsName": "No authors available",
-      "numPages": 944,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=WwE8PFDfLBkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=WwE8PFDfLBkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "No categories available",
-      "isbn": "WISC:89128089471",
-      "numCopies": 5
-    },
-    {
       "id": "4282",
       "bookName": "A bilingual concordance to the Targum of the Prophets",
       "authorsName": "Johannes Cornelis Moor",
@@ -274,66 +46,6 @@
       "imageLarge": "http://books.google.com/books/content?id=Hs3YAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "categories": "Bibles",
       "isbn": "UOM:39015043811127",
-      "numCopies": 5
-    },
-    {
-      "id": "ec85",
-      "bookName": "Principles of Political Economy",
-      "authorsName": "John Stuart Mill",
-      "numPages": 626,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=GyCvg02m1OcC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=GyCvg02m1OcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "Economics",
-      "isbn": "HARVARD:32044037735354",
-      "numCopies": 5
-    },
-    {
-      "id": "5182",
-      "bookName": "Floriculture: a book of reference for amateur and professional gardeners ... With ... coloured illustrations",
-      "authorsName": "George M. F. GLENNY",
-      "numPages": 138,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=WaHksPbL39AC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=WaHksPbL39AC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "No categories available",
-      "isbn": "BL:A0021974900",
-      "numCopies": 5
-    },
-    {
-      "id": "5008",
-      "bookName": "A Library of the World's Best Literature",
-      "authorsName": "Charles Dudley Warner, Hamilton Wright Mabie, Charles Henry Warner, Lucia Isabella Gilbert Runkle, George H. Warner",
-      "numPages": 466,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=1VNhR53sAB0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=1VNhR53sAB0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "Authors",
-      "isbn": "SRLF:D0007615933",
-      "numCopies": 5
-    },
-    {
-      "id": "79f4",
-      "bookName": "Harry Potter and the Sorcerer's Stone",
-      "authorsName": "J.K. Rowling",
-      "numPages": 311,
-      "shortDescription": "Turning the envelope over, his hand trembling, Harry saw a purple wax seal bearing a coat of arms; a lion, an eagle, a badger and a snake surrounding a large letter 'H'. Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin! Having become classics of our time, the Harry Potter eBooks never fail to bring comfort and escapism. With their message of hope, belonging and the enduring power of truth and love, the story of the Boy Who Lived continues to delight generations of new readers.",
-      "imageSmall": "http://books.google.com/books/content?id=wrOQLV6xB-wC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=wrOQLV6xB-wC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "categories": "Juvenile Fiction",
-      "isbn": "9781781100486, 1781100489",
-      "numCopies": 5
-    },
-    {
-      "id": "03da",
-      "bookName": "War and Peace",
-      "authorsName": "graf Leo Tolstoy",
-      "numPages": 768,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=jVMEAAAAYAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=jVMEAAAAYAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "Napoleonic Wars, 1800-1815",
-      "isbn": "HARVARD:32044018750919",
       "numCopies": 5
     },
     {
@@ -385,30 +97,6 @@
       "numCopies": 5
     },
     {
-      "id": "5fa6",
-      "bookName": "hjb",
-      "authorsName": "ybh",
-      "numPages": 7,
-      "shortDescription": "7bn",
-      "imageSmall": "hk",
-      "imageLarge": "hj",
-      "categories": "nj",
-      "isbn": "ij",
-      "numCopies": 8
-    },
-    {
-      "id": "1892",
-      "bookName": "The Electrical Engineer",
-      "authorsName": "No authors available",
-      "numPages": 632,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=frs5Cf0UiWoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=frs5Cf0UiWoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "Electric engineering",
-      "isbn": "UOM:39015039706810",
-      "numCopies": 5
-    },
-    {
       "id": "3c6c",
       "bookName": "Il Profeta Isaia volgarizzato e commentato",
       "authorsName": "Samuel Davide LUZZATTO",
@@ -442,6 +130,30 @@
       "imageLarge": "http://books.google.com/books/content?id=NtKIDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "categories": "Juvenile Fiction",
       "isbn": "9781524767716, 1524767719",
+      "numCopies": 5
+    },
+    {
+      "id": "1207",
+      "bookName": "Harry Potter and the Sorcerer's Stone",
+      "authorsName": "J.K. Rowling",
+      "numPages": 311,
+      "shortDescription": "Turning the envelope over, his hand trembling, Harry saw a purple wax seal bearing a coat of arms; a lion, an eagle, a badger and a snake surrounding a large letter 'H'. Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin! Having become classics of our time, the Harry Potter eBooks never fail to bring comfort and escapism. With their message of hope, belonging and the enduring power of truth and love, the story of the Boy Who Lived continues to delight generations of new readers.",
+      "imageSmall": "http://books.google.com/books/content?id=wrOQLV6xB-wC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      "imageLarge": "http://books.google.com/books/content?id=wrOQLV6xB-wC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "categories": "Juvenile Fiction",
+      "isbn": "9781781100486, 1781100489",
+      "numCopies": 5
+    },
+    {
+      "id": "06ae",
+      "bookName": "Harry Potter and the Chamber of Secrets",
+      "authorsName": "J.K. Rowling",
+      "numPages": 325,
+      "shortDescription": "'There is a plot, Harry Potter. A plot to make most terrible things happen at Hogwarts School of Witchcraft and Wizardry this year.' Harry Potter's summer has included the worst birthday ever, doomy warnings from a house-elf called Dobby, and rescue from the Dursleys by his friend Ron Weasley in a magical flying car! Back at Hogwarts School of Witchcraft and Wizardry for his second year, Harry hears strange whispers echo through empty corridors - and then the attacks start. Students are found as though turned to stone... Dobby's sinister predictions seem to be coming true. Having become classics of our time, the Harry Potter eBooks never fail to bring comfort and escapism. With their message of hope, belonging and the enduring power of truth and love, the story of the Boy Who Lived continues to delight generations of new readers.",
+      "imageSmall": "http://books.google.com/books/content?id=DQQhCwAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      "imageLarge": "http://books.google.com/books/content?id=DQQhCwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "categories": "Fiction",
+      "isbn": "9781781100509, 1781100500",
       "numCopies": 5
     }
   ],
@@ -543,56 +255,185 @@
       "isbn": "9781524767716, 1524767719",
       "action": "Create",
       "date": "29/05/2024, 12:11"
+    },
+    {
+      "id": "fc33",
+      "bookName": "God or Baal: a sermon, etc",
+      "isbn": "BL:A0021806083",
+      "action": "Delete",
+      "date": "29/05/2024, 13:24"
+    },
+    {
+      "id": "535d",
+      "bookName": "Jesus versus Christianity. By a Cantab",
+      "isbn": "BL:A0022696523",
+      "action": "copy added",
+      "date": "29/05/2024, 13:28"
+    },
+    {
+      "id": "8092",
+      "bookName": "Hippopathology: a Systematic Treatise on the Disorders and Lameness of the Horse",
+      "isbn": "MINN:31951D02060383X",
+      "action": "Delete",
+      "date": "29/05/2024, 14:22"
+    },
+    {
+      "id": "fef1",
+      "bookName": "Man mortal: being a reply to Mr. F. W. Grant's “Life and Immortality,” etc",
+      "isbn": "BL:A0022673926",
+      "action": "Delete",
+      "date": "29/05/2024, 14:22"
+    },
+    {
+      "id": "f04f",
+      "bookName": "The Wants and Means of India. A Paper, Etc",
+      "isbn": "BL:A0021869697",
+      "action": "Delete",
+      "date": "29/05/2024, 14:23"
+    },
+    {
+      "id": "dfe2",
+      "bookName": "Jesus versus Christianity. By a Cantab",
+      "isbn": "BL:A0022696523",
+      "action": "Delete",
+      "date": "29/05/2024, 14:23"
+    },
+    {
+      "id": "006c",
+      "bookName": "The Christian Kingdom. A Sermon, Etc",
+      "isbn": "BL:A0021761125",
+      "action": "Delete",
+      "date": "29/05/2024, 14:26"
+    },
+    {
+      "id": "b1dd",
+      "bookName": "Morning and Evening Sacrifice: a handbook for domestic worship",
+      "isbn": "BL:A0021939451",
+      "action": "Delete",
+      "date": "29/05/2024, 14:27"
+    },
+    {
+      "id": "b810",
+      "bookName": "A Defence of the Record of Revelation Agaisnt \"Christian Theology and Modern Scepticism.\".",
+      "isbn": "BL:A0021970351",
+      "action": "Delete",
+      "date": "29/05/2024, 14:30"
+    },
+    {
+      "id": "3010",
+      "bookName": "Chambers's Journal of Popular Literature, Science and Arts",
+      "isbn": "WISC:89128089471",
+      "action": "Delete",
+      "date": "29/05/2024, 14:34"
+    },
+    {
+      "id": "9b09",
+      "bookName": "Floriculture: a book of reference for amateur and professional gardeners ... With ... coloured illustrations",
+      "isbn": "BL:A0021974900",
+      "action": "Delete",
+      "date": "29/05/2024, 14:37"
+    },
+    {
+      "id": "c4a2",
+      "bookName": "A Library of the World's Best Literature",
+      "isbn": "SRLF:D0007615933",
+      "action": "Delete",
+      "date": "29/05/2024, 14:40"
+    },
+    {
+      "id": "6892",
+      "bookName": "Principles of Political Economy",
+      "isbn": "HARVARD:32044037735354",
+      "action": "Delete",
+      "date": "29/05/2024, 14:40"
+    },
+    {
+      "id": "fc93",
+      "bookName": "War and Peace",
+      "isbn": "HARVARD:32044018750919",
+      "action": "Delete",
+      "date": "29/05/2024, 14:48"
+    },
+    {
+      "id": "b731",
+      "bookName": "hjb",
+      "isbn": "ij",
+      "action": "Delete",
+      "date": "29/05/2024, 14:49"
+    },
+    {
+      "id": "83c5",
+      "bookName": "Harry Potter and the Sorcerer's Stone",
+      "isbn": "9781781100486, 1781100489",
+      "action": "Delete",
+      "date": "29/05/2024, 14:51"
+    },
+    {
+      "id": "3b43",
+      "bookName": "Harry Potter and the Sorcerer's Stone",
+      "isbn": "9781781100486, 1781100489",
+      "action": "Create",
+      "date": "29/05/2024, 14:51"
+    },
+    {
+      "id": "8cab",
+      "bookName": "Harry Potter and the Chamber of Secrets",
+      "isbn": "9781781100509, 1781100500",
+      "action": "Create",
+      "date": "29/05/2024, 14:51"
+    },
+    {
+      "id": "3e25",
+      "bookName": "bfb",
+      "isbn": "556767",
+      "action": "Delete",
+      "date": "29/05/2024, 14:52"
+    },
+    {
+      "id": "10aa",
+      "bookName": "The Electrical Engineer",
+      "isbn": "UOM:39015039706810",
+      "action": "Delete",
+      "date": "29/05/2024, 15:00"
+    },
+    {
+      "id": "0217",
+      "bookName": "מחזור",
+      "isbn": "NLI:1993907-20",
+      "action": "Delete",
+      "date": "29/05/2024, 15:36"
     }
   ],
   "favorites": [
     {
-      "id": "999b",
-      "bookName": "Hippopathology: a Systematic Treatise on the Disorders and Lameness of the Horse",
-      "authorsName": "William Percivall",
-      "imageSmall": "http://books.google.com/books/content?id=Hlo_aH173uoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+      "id": "ed41",
+      "bookName": "The Great Gatsby",
+      "authorsName": "F. Scott Fitzgerald",
+      "imageSmall": "http://books.google.com/books/content?id=iWA-DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
     },
     {
-      "id": "e605",
-      "bookName": "The Christian Kingdom. A Sermon, Etc",
-      "authorsName": "Henry James Coleridge",
-      "imageSmall": "http://books.google.com/books/content?id=XHyvKN3qJ5wC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+      "id": "7404",
+      "bookName": "Harry's War - The True Story of the Soldier Prince",
+      "authorsName": "Robert Jobson",
+      "imageSmall": "http://books.google.com/books/content?id=fzutDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
     },
     {
-      "id": "6e30",
-      "bookName": "God or Baal: a sermon, etc",
-      "authorsName": "Joseph SLATER (Assistant Priest at the Church of Saint Lawrence Southampton.)",
-      "imageSmall": "http://books.google.com/books/content?id=8m_Yf-tS4TEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+      "id": "bfc6",
+      "bookName": "Harry's Apology",
+      "authorsName": "David Martin Anderson",
+      "imageSmall": "http://books.google.com/books/content?id=KAXfDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
     },
     {
-      "id": "4401",
-      "bookName": "Morning and Evening Sacrifice: a handbook for domestic worship",
-      "authorsName": "James Dickerson DAVIES",
-      "imageSmall": "http://books.google.com/books/content?id=xbVE3PulfKkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-    },
-    {
-      "id": "3afa",
-      "bookName": "Man mortal: being a reply to Mr. F. W. Grant's “Life and Immortality,” etc",
-      "authorsName": "Robert ROBERTS (Christadelphian.)",
-      "imageSmall": "http://books.google.com/books/content?id=gzhD6yRJaqkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-    },
-    {
-      "id": "645e",
-      "bookName": "Jesus versus Christianity. By a Cantab",
-      "authorsName": "CANTAB.",
-      "imageSmall": "http://books.google.com/books/content?id=YM_21yyfPNUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-    },
-    {
-      "id": "ee25",
-      "bookName": "French-English and English-French Dictionary, Comprising All the Improvements of the Latest London and Paris Editions, with the Pronunciation of Each Word, According to the Dictionary of the Abbé Tardy",
-      "authorsName": "Abel Boyer",
-      "imageSmall": "http://books.google.com/books/content?id=SxME5j7U4QEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-    },
-    {
-      "id": "1165",
+      "id": "2167",
       "bookName": "A Shaker's Answer to the Oft-repeated Question, \"What Would Become of the World If All Should Become Shakers?\"",
       "authorsName": "Richard W. Pelham",
       "imageSmall": "http://books.google.com/books/content?id=XA1CN22onEgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+    },
+    {
+      "id": "11f3",
+      "bookName": "Melakhim A",
+      "authorsName": "No authors available",
+      "imageSmall": "http://books.google.com/books/content?id=cglyWKzhPEMC&printsec=frontcover&img=1&zoom=5&source=gbs_api"
     }
   ]
 }

@@ -4,6 +4,13 @@ header{
   font-weight: 600;
   font-style: normal;
 }
+main{
+display: flex;
+flex-direction: column;
+}
+nav ul{
+  padding: 0;
+}
 table {
   width: 90%;
   margin: 20px auto;
@@ -41,4 +48,10 @@ th {
 
 td {
   font-size: 14px;
+}
+.pagination{
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  
 }

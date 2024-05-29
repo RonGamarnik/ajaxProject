@@ -35,9 +35,13 @@ header {
 }
 nav {
   padding-top: 0.35em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 nav ul {
   list-style-type: none;
+  padding-top: 0.68em;
 }
 
 nav ul li {
@@ -51,7 +55,19 @@ nav ul li a {
   font-weight: bold;
   transition: color 0.3s ease;
 }
-
+nav input{
+  display: block;
+  width: 30%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  border-radius: 5px;
+  font-family: "Vollkorn", serif;
+  font-optical-sizing: auto;
+justify-self: flex-end;
+}
 nav ul li a:hover {
   color: #0e3f72;
 }
@@ -95,6 +111,9 @@ main {
   flex-wrap: wrap;
   align-items: center;
 }
+.imgAndData{
+  display: flex;
+}
 .imgAndName {
   width: 40%;
 }
@@ -112,8 +131,7 @@ main {
   visibility: hidden;
   background-color: #adc0efe2;
   opacity: 0;
-  padding: 3em;
-  height: 80vh;
+  padding: 0.7em 2.5em;
   position: fixed;
   top: 3em;
   right: 17em;
@@ -126,12 +144,14 @@ main {
   font-weight: 400;
   font-style: normal;
 }
+.chosenBook h3{
+ text-align: center;
+padding: 1.5em;
+}
 .chosenBookData {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  gap: 0.5em;
-  padding-left: 1em;
+  /* padding-top: 6em; */
 }
 .chosenBookData button {
   background-color: #eee;
@@ -175,6 +195,11 @@ main {
   margin: 10px;
   height: 340px; /* Set a fixed height for all books */
   overflow: hidden;
+  transition: 0.2s;
+
+}
+.book:hover{
+  transform:scale(1.1) ;
 }
 
 .book p {
@@ -184,6 +209,12 @@ main {
   font-weight: 400;
   font-style: italic;
   color: #333;
+}
+.book img{
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border: 1px solid rgba(118, 118, 142, 0.781);
 }
 .book .bookName {
   font-family: "Vollkorn", serif;
@@ -262,6 +293,10 @@ span {
   border: none;
   cursor: pointer;
   font-weight: 900;
-  left: 51em;
-  bottom: 3em;
+  left: 36em;
+  bottom: 0.1em;
+  font-size: larger;
+}
+#delete, #forward, #back {
+  cursor: pointer;
 }

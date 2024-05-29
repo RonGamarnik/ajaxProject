@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', (event) => {
     const historyUrl = "http://localhost:8001/history";
     const table = document.querySelector('table');
 
@@ -24,4 +23,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     displayHistory();
-});
+

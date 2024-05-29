@@ -35,7 +35,9 @@ function displayBooks(books) {
 
     const imgSrc = book.imageSmall ? book.imageSmall : "default-image.jpg";
     const bookName = book.bookName ? book.bookName : "No title available";
-    const authorsName = book.authorsName ? book.authorsName : "No authors available";
+    const authorsName = book.authorsName
+      ? book.authorsName
+      : "No authors available";
 
     bookElement.innerHTML = `
       <img src="${imgSrc}" alt="Book Image"/>
@@ -53,23 +55,38 @@ function searchBooks() {
   isSearching = true;
   page = 1; // Reset to first page for search results
 
-  axios.get(urlBooks)
-    .then((response) => {
-      if (Array.isArray(response.data)) {
-        allBooks = response.data;
-        filteredBooks = allBooks.filter(book =>
-          book.bookName && book.bookName.toLowerCase().includes(searchString)
-        );
-        displayBooks(getPaginatedBooks(filteredBooks, page));
-      } else {
-        console.error("Unexpected response structure:", response.data);
-      }
-    })
-    .catch((error) => {
-      console.error("Error fetching books:", error);
-    });
+  setTimeout(() => {
+    axios
+      .get(urlBooks)
+      .then((response) => {
+        if (Array.isArray(response.data)) {
+          allBooks = response.data;
+          filteredBooks = allBooks.filter(
+            (book) =>
+              book.bookName &&
+              book.bookName.toLowerCase().includes(searchString)
+          );
+          displayBooks(getPaginatedBooks(filteredBooks, page));
+        } else {
+          console.error("Unexpected response structure:", response.data);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching books:", error);
+      });
+  }, 300);
 }
 
+function debounce(func) {
+  let timerId;
+  return () => {
+    clearTimeout(timerId);
+    timerId = setTimeout(() => {
+      func();
+    }, 300);
+  };
+}
+const searchBounce = debounce(searchBooks);
 function getPaginatedBooks(books, page) {
   const booksPerPage = 10;
   const start = (page - 1) * booksPerPage;
@@ -100,10 +117,10 @@ function previous() {
 function chosenBook(book) {
   const header = document.querySelector("header");
   chosenBookDisplay.style.opacity = "1";
-   showAllBooksDisplay.style.opacity = "0.2";
-   header.style.opacity = "0.2";
-   chosenBookDisplay.style.zIndex = "9999"
-   paginateButtons.style.opacity = "0.2";
+  showAllBooksDisplay.style.opacity = "0.2";
+  header.style.opacity = "0.2";
+  chosenBookDisplay.style.zIndex = "9999";
+  paginateButtons.style.opacity = "0.2";
 
   chosenBookDisplay.innerHTML = `
   <div class="imgAndName">
@@ -128,14 +145,14 @@ function chosenBook(book) {
     </div>
     </div>
     `;
-    const closeButton = document.querySelector(".close");
-    closeButton.addEventListener("click", () => {
-      chosenBookDisplay.style.opacity = "0";
-      chosenBookDisplay.style.zIndex = "-1";
-      showAllBooksDisplay.style.opacity = "1";
-      header.style.opacity = "1";
-      paginateButtons.style.opacity = "1";
-    });
+  const closeButton = document.querySelector(".close");
+  closeButton.addEventListener("click", () => {
+    chosenBookDisplay.style.opacity = "0";
+    chosenBookDisplay.style.zIndex = "-1";
+    showAllBooksDisplay.style.opacity = "1";
+    header.style.opacity = "1";
+    paginateButtons.style.opacity = "1";
+  });
 
   // Add event listeners in JavaScript
   document
@@ -152,27 +169,34 @@ function chosenBook(book) {
     .addEventListener("click", () => removeCopies(book.id));
 }
 
-function addCopies(bookId) {
-  const book = allBooks.find((b) => b.id === bookId);
-  if (book) {
-    book.numCopies += 1;
-    updateBook(book);
-    chosenBook(book);
+async function addCopies(bookId) {
+  try {
+    const response = await axios.get(`${urlBooks}/${bookId}`);
+    const bookToUpdate = response.data;
+    bookToUpdate.numCopies += 1;
+    updateBook(bookToUpdate)
+  } catch (error) {
+    console.log(error);
   }
+
 }
 
-function removeCopies(bookId) {
-  const book = allBooks.find((b) => b.id === bookId);
-  if (book && book.numCopies > 0) {
-    book.numCopies -= 1;
-    updateBook(book);
-    chosenBook(book);
+async function removeCopies(bookId) {
+  try {
+    const response = await axios.get(`${urlBooks}/${bookId}`);
+    const bookToUpdate = response.data;
+    bookToUpdate.numCopies -= 1;
+    updateBook(bookToUpdate)
+  } catch (error) {
+    console.log(error);
   }
+
+
 }
 
-function updateBook(book) {
+function updateBook(bookToUpdate) {
   axios
-    .patch(`${urlBooks}/${book.id}`, book)
+    .patch(`${urlBooks}/${bookToUpdate.id}`, bookToUpdate)
     .then((response) => {
       console.log("Book updated:", response.data);
     })
@@ -306,4 +330,3 @@ function deleteBookFromFavorite(bookName) {
 }
 
 showAllBooks(page);
-

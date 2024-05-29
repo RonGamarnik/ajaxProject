@@ -16,7 +16,7 @@ body {
 header {
   background-color: #cad4eeb1;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 31px 20px;
   display: flex;
   font-family: "Forum", serif;
   font-weight: 600;
@@ -250,4 +250,109 @@ span {
   cursor: pointer;
   transform: scale(1.1);
   z-index: 9999;
+}
+@media only screen and (max-width: 600px) {
+  /* Adjusting the padding and font size for the body */
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* Header styles */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 80px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    padding-top: 0.35em;
+    display: flex;
+    gap: 1em;
+  }
+
+  nav ul li {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  nav input {
+    width: 80%;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* Main content styles */
+  main {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .favorites {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .imgAndName {
+    width: 100%;
+    text-align: center;
+  }
+
+  .chosenBook {
+    width: 90%;
+    height: auto;
+    top: 1em;
+    left: 1em;
+    padding: 1em 2em;
+    justify-content: center;
+  }
+
+  .chosenBookData {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .chosenBook p {
+    padding: 0.5em;
+  }
+
+  .favoriteBook {
+    width: 30%;
+    height: 17em;
+    margin: 10px 0;
+  }
+
+  .favoriteBook img {
+    height: auto;
+  }
+
+  .paginateButtons {
+    gap: 0.5em;
+  }
+
+  .paginateButtons button {
+    width: 100%;
+  }
+
+  .chosenBookData button {
+    width: 80%;
+  }
 }

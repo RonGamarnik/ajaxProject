@@ -56,15 +56,15 @@ function displayBooks(books) {
 async function searchBooks() {
   const searchString = searchInput.value.toLowerCase();
   isSearching = true;
-  page = 1; 
+  page = 1;
 
- 
+
   const loader = document.querySelector(".loader");
   loader.style.display = "block";
   allBookCard.style.display = "none";
 
   try {
-    
+
     await new Promise((resolve) => setTimeout(resolve, 300));
 
     const response = await axios.get(urlBooks);
@@ -108,7 +108,7 @@ function getPaginatedBooks(books, page) {
 }
 
 function next() {
-  if(page === lastPage) {
+  if (page === lastPage) {
     return;
   }
   page += 1;
@@ -131,56 +131,67 @@ function previous() {
 }
 
 function chosenBook(book) {
-  chosenBookDisplay.style.opacity = "1";
-  chosenBookDisplay.style.display = "block";
-  chosenBookDisplay.style.visibility = "visible";
-  showAllBooksDisplay.style.opacity = "0.2";
-  header.style.opacity = "0.2";
-  chosenBookDisplay.style.zIndex = "9999";
-  paginateButtons.style.opacity = "0.2";
+  try {
+    // Display the chosen book card and adjust opacity for other elements
+    chosenBookDisplay.style.opacity = "1";
+    chosenBookDisplay.style.display = "block";
+    chosenBookDisplay.style.visibility = "visible";
+    showAllBooksDisplay.style.opacity = "0.2";
+    header.style.opacity = "0.2";
+    chosenBookDisplay.style.zIndex = "9999";
+    paginateButtons.style.opacity = "0.2";
 
-  chosenBookDisplay.innerHTML = `
-  <i class="fa-regular fa-circle-xmark close"></i>
-  <h3 id="name">${book.bookName}</h3>
-  <div class="imgAndData">
-    <div class="imgAndName">
-      <img src="${book.imageLarge}" alt="Book Image" />
-      <div class="buttonsUpper">
-        <i  id="addToFav" class="fa-regular fa-star"></i>
-        <i class="fa-regular fa-trash-can" id="delete"></i> 
-      </div>
-    </div>
-  
-    <div class="chosenBookData">
-      <p><span>Author:</span> ${book.authorsName}</p>
-      <p><span>Number of pages:</span> ${book.numPages}</p>
-      <p><span>Description:</span> ${book.shortDescription}</p>
-      <p><span>Categories:</span> ${book.categories}</p>
-      <p><span>Number of copies:</span> ${book.numCopies}</p>
-      <p><span>ISBN:</span> ${book.isbn}</p>
-      <div class="buttonsForCopies">
-        <button id="plus">+</button>
-        <button id="minus">-</button>
-      </div>
-    </div>
-  </div>
-    `;
-  const closeButton = document.querySelector(".close");
-  closeButton.addEventListener("click", close);
+    // Check if the book is in the favorites list
+    const favoritesUrl = "http://localhost:8001/favorites";
+    axios.get(favoritesUrl)
+      .then((response) => {
+        const favoriteBooks = response.data;
+        const isFavorite = favoriteBooks.some((favBook) => favBook.id === book.id);
 
-  // Add event listeners in JavaScript
-  document
-    .getElementById("addToFav")
-    .addEventListener("click", () => addToFavorites(book));
-  document
-    .getElementById("delete")
-    .addEventListener("click", () => deleteBookFromLibrary(book));
-  document
-    .getElementById("plus")
-    .addEventListener("click", () => addCopies(book.id));
-  document
-    .getElementById("minus")
-    .addEventListener("click", () => removeCopies(book.id));
+        // Determine the class for the star icon based on whether the book is a favorite
+        const starIconClass = isFavorite ? "fa-solid fa-star" : "fa-regular fa-star";
+
+        // Generate the HTML for the chosen book card, including the star icon
+        chosenBookDisplay.innerHTML = `
+          <i class="fa-regular fa-circle-xmark close"></i>
+          <h3 id="name">${book.bookName}</h3>
+          <div class="imgAndData">
+            <div class="imgAndName">
+              <img src="${book.imageLarge}" alt="Book Image" />
+              <div class="buttonsUpper">
+                <i id="addToFav" class="${starIconClass}"></i>
+                <i class="fa-regular fa-trash-can" id="delete"></i> 
+              </div>
+            </div>
+            <div class="chosenBookData">
+              <p><span>Author:</span> ${book.authorsName}</p>
+              <p><span>Number of pages:</span> ${book.numPages}</p>
+              <p><span>Description:</span> ${book.shortDescription}</p>
+              <p><span>Categories:</span> ${book.categories}</p>
+              <p><span>Number of copies:</span> ${book.numCopies}</p>
+              <p><span>ISBN:</span> ${book.isbn}</p>
+              <div class="buttonsForCopies">
+                <button id="plus">+</button>
+                <button id="minus">-</button>
+              </div>
+            </div>
+          </div>
+        `;
+
+        // Add event listeners for closing the card and other functionalities
+        const closeButton = document.querySelector(".close");
+        closeButton.addEventListener("click", close);
+        document.getElementById("addToFav").addEventListener("click", () => addToFavorites(book));
+        document.getElementById("delete").addEventListener("click", () => deleteBookFromLibrary(book));
+        document.getElementById("plus").addEventListener("click", () => addCopies(book.id));
+        document.getElementById("minus").addEventListener("click", () => removeCopies(book.id));
+      })
+      .catch((error) => {
+        console.error("Error fetching favorite books:", error);
+      });
+  } catch (error) {
+    console.error("Error in chosenBook function:", error);
+  }
 }
 function close() {
   chosenBookDisplay.style.opacity = "0";
@@ -228,7 +239,7 @@ function updateBook(bookToUpdate) {
 
 function addToFavorites(book) {
   close();
-  
+
   const favoritesUrl = "http://localhost:8001/favorites";
 
   // Fetch the current list of favorite books
@@ -244,7 +255,7 @@ function addToFavorites(book) {
 
       if (!bookExists) {
         const favoriteBook = {
-          id:book.id,
+          id: book.id,
           bookName: book.bookName || "No title available",
           authorsName: book.authorsName || "No authors available",
           imageSmall: book.imageSmall || "No image available",
@@ -278,7 +289,7 @@ async function deleteBookFromLibrary(book) {
     console.log("Book deleted:", response.data);
     removeBookFromDisplay(book.id);
     addDeleteToHistory(book);
-    await deleteBookFromFavorite(book.id); 
+    await deleteBookFromFavorite(book.id);
     close();
   } catch (error) {
     console.error("Error deleting book:", error);
@@ -371,7 +382,7 @@ function addCopyAddToHistory(book) {
     .catch((error) => {
       console.error("There was an error adding the book to history:", error);
     });
-}function reduceCopyAddToHistory(book) {
+} function reduceCopyAddToHistory(book) {
   const historyUrl = "http://localhost:8001/history";
   const historyBook = {
     bookName: book.bookName || "No title available",
@@ -390,12 +401,12 @@ function addCopyAddToHistory(book) {
 }
 async function lastPageCalc() {
   try {
-      const response = await axios.get(urlBooks);
-      const bookEntries = response.data;
-       lastPage = Math.ceil(bookEntries.length / 10);
-      console.log(lastPage);
+    const response = await axios.get(urlBooks);
+    const bookEntries = response.data;
+    lastPage = Math.ceil(bookEntries.length / 10);
+    console.log(lastPage);
   } catch (error) {
-      console.error("Error fetching Books:", error);
+    console.error("Error fetching Books:", error);
   }
 }
 

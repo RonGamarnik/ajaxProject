@@ -1,18 +1,6 @@
 {
   "books": [
     {
-      "id": "801a",
-      "bookName": "A Memorial of the Rev. James W. Dale, D.D.",
-      "authorsName": "James Roberts",
-      "numPages": 154,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=NamyhpiMCuQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=NamyhpiMCuQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "Clergy",
-      "isbn": "HARVARD:32044029886249",
-      "numCopies": 5
-    },
-    {
       "id": "7f5a",
       "bookName": "Hippopathology: a Systematic Treatise on the Disorders and Lameness of the Horse",
       "authorsName": "William Percivall",
@@ -35,30 +23,6 @@
       "categories": "No categories available",
       "isbn": "BL:A0022673926",
       "numCopies": 5
-    },
-    {
-      "id": "50cf",
-      "bookName": "The Sacred Heart: a Correspondence Between ... Archbishop Manning, D.D., and the Rev. A. Nicholson, LL.D., as it Appeared in the “Guardian” Newspaper, Sept. 17th. With Notes for English Readers ... Second Edition",
-      "authorsName": "Henry Edward Manning",
-      "numPages": 40,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=Bj-be5_C5NAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=Bj-be5_C5NAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "No categories available",
-      "isbn": "BL:A0022013016",
-      "numCopies": 5
-    },
-    {
-      "id": "ba3b",
-      "bookName": "Lectures: Sicily. Genoa. A drive through the Engadine",
-      "authorsName": "John Lawson Stoddard",
-      "numPages": 350,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=Hn234i30NV0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=Hn234i30NV0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "Asia",
-      "isbn": "UCSD:31822041815861",
-      "numCopies": 4
     },
     {
       "id": "4908",
@@ -539,6 +503,27 @@
       "isbn": "NWU:35556039691969",
       "action": "Create",
       "date": "27/05/2024, 15:23"
+    },
+    {
+      "id": "1cae",
+      "bookName": "Lectures: Sicily. Genoa. A drive through the Engadine",
+      "isbn": "UCSD:31822041815861",
+      "action": "Delete",
+      "date": "28/05/2024, 14:29"
+    },
+    {
+      "id": "6b55",
+      "bookName": "A Memorial of the Rev. James W. Dale, D.D.",
+      "isbn": "HARVARD:32044029886249",
+      "action": "Delete",
+      "date": "28/05/2024, 14:29"
+    },
+    {
+      "id": "c4a3",
+      "bookName": "The Sacred Heart: a Correspondence Between ... Archbishop Manning, D.D., and the Rev. A. Nicholson, LL.D., as it Appeared in the “Guardian” Newspaper, Sept. 17th. With Notes for English Readers ... Second Edition",
+      "isbn": "BL:A0022013016",
+      "action": "Delete",
+      "date": "28/05/2024, 14:43"
     }
   ],
   "favorites": [
@@ -547,12 +532,6 @@
       "bookName": "Hippopathology: a Systematic Treatise on the Disorders and Lameness of the Horse",
       "authorsName": "William Percivall",
       "imageSmall": "http://books.google.com/books/content?id=Hlo_aH173uoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-    },
-    {
-      "id": "487d",
-      "bookName": "The Sacred Heart: a Correspondence Between ... Archbishop Manning, D.D., and the Rev. A. Nicholson, LL.D., as it Appeared in the “Guardian” Newspaper, Sept. 17th. With Notes for English Readers ... Second Edition",
-      "authorsName": "Henry Edward Manning",
-      "imageSmall": "http://books.google.com/books/content?id=Bj-be5_C5NAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
     },
     {
       "id": "e605",
@@ -571,6 +550,24 @@
       "bookName": "Morning and Evening Sacrifice: a handbook for domestic worship",
       "authorsName": "James Dickerson DAVIES",
       "imageSmall": "http://books.google.com/books/content?id=xbVE3PulfKkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+    },
+    {
+      "id": "3afa",
+      "bookName": "Man mortal: being a reply to Mr. F. W. Grant's “Life and Immortality,” etc",
+      "authorsName": "Robert ROBERTS (Christadelphian.)",
+      "imageSmall": "http://books.google.com/books/content?id=gzhD6yRJaqkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+    },
+    {
+      "id": "645e",
+      "bookName": "Jesus versus Christianity. By a Cantab",
+      "authorsName": "CANTAB.",
+      "imageSmall": "http://books.google.com/books/content?id=YM_21yyfPNUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+    },
+    {
+      "id": "ee25",
+      "bookName": "French-English and English-French Dictionary, Comprising All the Improvements of the Latest London and Paris Editions, with the Pronunciation of Each Word, According to the Dictionary of the Abbé Tardy",
+      "authorsName": "Abel Boyer",
+      "imageSmall": "http://books.google.com/books/content?id=SxME5j7U4QEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
     }
   ]
 }

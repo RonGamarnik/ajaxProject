@@ -129,10 +129,15 @@ async function fetchAndDisplayBooks() {
     console.log("No books found for the given query.");
   }
 }
+function debounce(func, timeout = 300) {
+  let timerId = undefined
+  return (...args) => {
+    clearTimeout(timerId);
+    timerId = setTimeout(() => func(...args), timeout);
+  };
+}
+const searchWithDebounce = debounce(fetchAndDisplayBooks)
 
-document
-  .getElementById("fetch-books-button")
-  .addEventListener("click", fetchAndDisplayBooks);
 
 function addCreateToHistory(book) {
   const historyUrl = "http://localhost:8001/history";

@@ -4,6 +4,7 @@ const chosenBookDisplay = document.querySelector(".chosenBook");
 const searchInput = document.getElementById("searchInput");
 const paginateButtons = document.querySelector(".paginateButtons");
 const header = document.querySelector("header");
+const allBookCard = document.querySelector(".allBooksCard")
 
 let page = 1;
 let allBooks = [];
@@ -51,32 +52,42 @@ function displayBooks(books) {
   });
 }
 
-function searchBooks() {
+async function searchBooks() {
   const searchString = searchInput.value.toLowerCase();
   isSearching = true;
-  page = 1; // Reset to first page for search results
+  page = 1; 
 
-  setTimeout(() => {
-    axios
-      .get(urlBooks)
-      .then((response) => {
-        if (Array.isArray(response.data)) {
-          allBooks = response.data;
-          filteredBooks = allBooks.filter(
-            (book) =>
-              book.bookName &&
-              book.bookName.toLowerCase().includes(searchString)
-          );
-          displayBooks(getPaginatedBooks(filteredBooks, page));
-        } else {
-          console.error("Unexpected response structure:", response.data);
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching books:", error);
-      });
-  }, 300);
+ 
+  const loader = document.querySelector(".loader");
+  loader.style.display = "block";
+  allBookCard.style.display = "none";
+
+  try {
+    
+    await new Promise((resolve) => setTimeout(resolve, 300));
+
+    const response = await axios.get(urlBooks);
+
+    if (Array.isArray(response.data)) {
+      allBooks = response.data;
+      filteredBooks = allBooks.filter(
+        (book) =>
+          book.bookName &&
+          book.bookName.toLowerCase().includes(searchString)
+      );
+      displayBooks(getPaginatedBooks(filteredBooks, page));
+    } else {
+      console.error("Unexpected response structure:", response.data);
+    }
+  } catch (error) {
+    console.error("Error fetching books:", error);
+  } finally {
+
+    loader.style.display = "none";
+    allBookCard.style.display = "block";
+  }
 }
+
 
 function debounce(func) {
   let timerId;
@@ -344,3 +355,4 @@ async function loaderDisplay(example) {
 
 // Usage
 loaderDisplay(() => showAllBooks(page));
+loaderDisplay(() => searchBooks());

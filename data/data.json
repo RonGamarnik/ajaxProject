@@ -46,7 +46,7 @@
       "imageLarge": "http://books.google.com/books/content?id=YM_21yyfPNUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "categories": "No categories available",
       "isbn": "BL:A0022696523",
-      "numCopies": 5
+      "numCopies": -4
     },
     {
       "id": "d33d",
@@ -58,7 +58,7 @@
       "imageLarge": "http://books.google.com/books/content?id=XHyvKN3qJ5wC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "categories": "No categories available",
       "isbn": "BL:A0021761125",
-      "numCopies": 5
+      "numCopies": -19
     },
     {
       "id": "7e88",
@@ -82,7 +82,7 @@
       "imageLarge": "http://books.google.com/books/content?id=xbVE3PulfKkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "categories": "No categories available",
       "isbn": "BL:A0021939451",
-      "numCopies": 5
+      "numCopies": 0
     },
     {
       "id": "2167",
@@ -106,7 +106,7 @@
       "imageLarge": "http://books.google.com/books/content?id=GOUbAbq33q4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "categories": "No categories available",
       "isbn": "BL:A0021970351",
-      "numCopies": 5
+      "numCopies": 4
     },
     {
       "id": "2ff6",
@@ -118,7 +118,7 @@
       "imageLarge": "http://books.google.com/books/content?id=YW-nPotMW2kC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "categories": "No categories available",
       "isbn": "BL:A0021948068",
-      "numCopies": 5
+      "numCopies": 6
     },
     {
       "id": "c58e",
@@ -202,7 +202,7 @@
       "imageLarge": "http://books.google.com/books/content?id=jwXctWt0uDIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "categories": "No categories available",
       "isbn": "BSB:BSB11338997",
-      "numCopies": 5
+      "numCopies": 4
     },
     {
       "id": "b732",
@@ -431,6 +431,18 @@
       "categories": "No categories available",
       "isbn": "NWU:35556039691969",
       "numCopies": 5
+    },
+    {
+      "id": "088d",
+      "bookName": "DreamWorks Shrek",
+      "authorsName": "Golden Books",
+      "numPages": 24,
+      "shortDescription": "DreamWorks’ Shrek—finally retold in a Little Golden Book! For the first time ever, enjoy the story of Shrek, Donkey, Princess Fiona, and all the fairy-tale creatures from Far Far Away in this all-new Little Golden Book perfect for children ages 3 to 5 and Shrek fans of all ages! Poor Shrek just wants to live peacefully in his swamp, but a kingdom of fairy-tale creatures has arrived uninvited. Lord Farquaad promises to give Shrek his swamp back on one condition: Shrek must rescue Princess Fiona from the castle where she is guarded by a fire-breathing dragon. An ornery ogre, a talking Donkey, and a curse only true love’s first kiss can break—now retold in a Little Golden Book!",
+      "imageSmall": "http://books.google.com/books/content?id=NtKIDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "imageLarge": "http://books.google.com/books/content?id=NtKIDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "categories": "Juvenile Fiction",
+      "isbn": "9781524767716, 1524767719",
+      "numCopies": 5
     }
   ],
   "history": [
@@ -524,6 +536,13 @@
       "isbn": "BL:A0022013016",
       "action": "Delete",
       "date": "28/05/2024, 14:43"
+    },
+    {
+      "id": "47bd",
+      "bookName": "DreamWorks Shrek",
+      "isbn": "9781524767716, 1524767719",
+      "action": "Create",
+      "date": "29/05/2024, 12:11"
     }
   ],
   "favorites": [
@@ -568,6 +587,12 @@
       "bookName": "French-English and English-French Dictionary, Comprising All the Improvements of the Latest London and Paris Editions, with the Pronunciation of Each Word, According to the Dictionary of the Abbé Tardy",
       "authorsName": "Abel Boyer",
       "imageSmall": "http://books.google.com/books/content?id=SxME5j7U4QEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+    },
+    {
+      "id": "1165",
+      "bookName": "A Shaker's Answer to the Oft-repeated Question, \"What Would Become of the World If All Should Become Shakers?\"",
+      "authorsName": "Richard W. Pelham",
+      "imageSmall": "http://books.google.com/books/content?id=XA1CN22onEgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
     }
   ]
 }

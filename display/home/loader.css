@@ -8,8 +8,8 @@
     width: 200px;
     height: 140px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 40%;
 
   }
   
@@ -188,6 +188,12 @@
   
     95%, 100% {
       transform: rotateY(0deg);
+    }
+  }
+  @media only screen and (max-width: 600px){
+    .loader{
+      top: 50%;
+    left: 27%;
     }
   }
   

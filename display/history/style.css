@@ -3,6 +3,7 @@ header{
   font-family: "Forum", serif;
   font-weight: 600;
   font-style: normal;
+  padding: 31px 20px;
 }
 main{
 display: flex;
@@ -55,3 +56,34 @@ td {
   gap: 1em;
   
 }
+@media only screen and (max-width: 600px) {
+  body{
+    width: 100%!important;
+    font-size: smaller !important;
+    display: block;
+  }
+  header{
+    width: 100%!important;
+    padding-left: 1em;
+    padding-right: 1em;
+
+  }
+  nav{
+    margin-left: 0;
+    padding-left: 0;
+    justify-content: flex-start;
+  }
+  table{
+    word-wrap: normal;
+  }
+  td{
+    padding: 0!important;
+  }
+  th{
+    padding: 0!important;
+  }
+  tr{
+    padding: 0!important;
+  }
+}
+

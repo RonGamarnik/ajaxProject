@@ -58,3 +58,41 @@ button[type="submit"]:hover {
 .manualButton {
   align-self: flex-start;
 }
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+    display: block;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+
+  .container {
+    max-width: 90%;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 20%;
+  }
+
+  form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input {
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+
+  .manualButton {
+    width: 100%;
+    align-self: center;
+  }
+}

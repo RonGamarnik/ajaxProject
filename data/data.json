@@ -22,7 +22,7 @@
       "imageLarge": "http://books.google.com/books/content?id=cglyWKzhPEMC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "categories": "Bible",
       "isbn": "UTEXAS:059172143303744",
-      "numCopies": 5
+      "numCopies": 4
     },
     {
       "id": "525c",
@@ -34,30 +34,6 @@
       "imageLarge": "http://books.google.com/books/content?id=NmjNHmeJ808C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "categories": "Folklore",
       "isbn": "UGA:32108006286721",
-      "numCopies": 5
-    },
-    {
-      "id": "4282",
-      "bookName": "A bilingual concordance to the Targum of the Prophets",
-      "authorsName": "Johannes Cornelis Moor",
-      "numPages": 376,
-      "shortDescription": "No description available",
-      "imageSmall": "http://books.google.com/books/content?id=Hs3YAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=Hs3YAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "categories": "Bibles",
-      "isbn": "UOM:39015043811127",
-      "numCopies": 5
-    },
-    {
-      "id": "ed41",
-      "bookName": "The Great Gatsby",
-      "authorsName": "F. Scott Fitzgerald",
-      "numPages": 182,
-      "shortDescription": "**The twentieth-century masterpiece, the authoritative new edition** With a new foreword by Jesmyn Ward, author of the Women's Prize-shortlisted Sing, Unburied, Sing ‘There was music from my neighbour’s house through the summer nights. In his blue gardens men and girls came and went like moths among the whisperings and the champagne and the stars.’ Enigmatic, intriguing and fabulously wealthy, Jay Gatsby throws lavish parties at his West Egg mansion to impress Daisy Buchanan, the object of his obsession, now married to bullish Tom Buchanan. Over a Long Island summer, his neighbour Nick Carraway, a writer and a cousin to Daisy, looks on as Gatsby and Daisy’s affair deepens. Tragedy looms in F. Scott Fitzgerald’s masterpiece third novel, frequently named among the best novels of the twentieth century. Praise for The Great Gatsby: ‘A classic, perhaps the supreme American novel’ Sunday Times ‘More than an American classic; it’s become a defining document of the national psyche, a creation myth, the Rosetta Stone of the American dream’ Guardian ‘F. Scott Fitzgerald was better than he knew, for in fact and in the literary sense he invented a generation’ New York Times ‘An unquiet masterpiece whose mystery never fails to exert its power’ Robert McCrum, Observer, ‘The 100 Best Novels in English’",
-      "imageSmall": "http://books.google.com/books/content?id=iWA-DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "imageLarge": "http://books.google.com/books/content?id=iWA-DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "categories": "Fiction",
-      "isbn": "9781471173943, 1471173941",
       "numCopies": 5
     },
     {
@@ -94,7 +70,7 @@
       "imageLarge": "http://books.google.com/books/content?id=yicDl0rgpNQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "categories": "Military cadets",
       "isbn": "9781434353924, 1434353923",
-      "numCopies": 5
+      "numCopies": 6
     },
     {
       "id": "3c6c",
@@ -130,7 +106,7 @@
       "imageLarge": "http://books.google.com/books/content?id=NtKIDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "categories": "Juvenile Fiction",
       "isbn": "9781524767716, 1524767719",
-      "numCopies": 5
+      "numCopies": 4
     },
     {
       "id": "1207",
@@ -154,6 +130,78 @@
       "imageLarge": "http://books.google.com/books/content?id=DQQhCwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "categories": "Fiction",
       "isbn": "9781781100509, 1781100500",
+      "numCopies": 5
+    },
+    {
+      "id": "2541",
+      "bookName": "",
+      "authorsName": "",
+      "numPages": null,
+      "shortDescription": "",
+      "imageSmall": "",
+      "imageLarge": "",
+      "categories": "",
+      "isbn": "",
+      "numCopies": null
+    },
+    {
+      "id": "a79e",
+      "bookName": "",
+      "authorsName": "",
+      "numPages": null,
+      "shortDescription": "",
+      "imageSmall": "",
+      "imageLarge": "",
+      "categories": "",
+      "isbn": "",
+      "numCopies": null
+    },
+    {
+      "id": "5979",
+      "bookName": "",
+      "authorsName": "",
+      "numPages": null,
+      "shortDescription": "",
+      "imageSmall": "",
+      "imageLarge": "",
+      "categories": "",
+      "isbn": "",
+      "numCopies": null
+    },
+    {
+      "id": "94dc",
+      "bookName": "The Secrets of Love",
+      "authorsName": "Rosie Rushton",
+      "numPages": 275,
+      "shortDescription": "What would happen if you transferred the traumas of teenage love from Jane Austen's Sense and Sensibility to the twenty-first century? How would Ellie, Abby and Georgie fare without the restraints of nineteenth-century England? Will Ellie's ever-sensible attitude towards life prevent her from ever snogging the gorgeous, but somewhat reticent, Blake? Is Abby's devil-may-care outlook destined to land her in big trouble with Hunter, who majors in being up himself? And what about the baby of the family, Georgie? She's a tomboy, with more male friends than anyone, and so strong-willed she'll never take no for an answer!",
+      "imageSmall": "http://books.google.com/books/content?id=FeluAAAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      "imageLarge": "http://books.google.com/books/content?id=FeluAAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "categories": "Love",
+      "isbn": "1853407747, 9781853407741",
+      "numCopies": 5
+    },
+    {
+      "id": "9396",
+      "bookName": "",
+      "authorsName": "",
+      "numPages": null,
+      "shortDescription": "",
+      "imageSmall": "",
+      "imageLarge": "",
+      "categories": "",
+      "isbn": "",
+      "numCopies": null
+    },
+    {
+      "id": "501e",
+      "bookName": "Jony Ive",
+      "authorsName": "Leander Kahney",
+      "numPages": 320,
+      "shortDescription": "“An adulating biography of Apple’s left-brained wunderkind, whose work continues to revolutionize modern technology.” —Kirkus Reviews In 1997, Steve Jobs discovered a scruffy British designer toiling away at Apple’s headquarters, surrounded by hundreds of sketches and prototypes. Jony Ive’s collaboration with Jobs would produce some of the world’s most iconic technology products, including the iMac, iPod, iPad, and iPhone. Ive’s work helped reverse Apple’s long decline, overturned entire industries, and created a huge global fan base. Yet little is known about the shy, soft-spoken whiz whom Jobs referred to as his “spiritual partner.” Leander Kahney offers a detailed portrait of the English art school student with dyslexia who became the most acclaimed tech designer of his generation. Drawing on interviews with Ive’s former colleagues and Apple insiders, Kahney “takes us inside the creation of these memorable objects.” (The Wall Street Journal)",
+      "imageSmall": "http://books.google.com/books/content?id=407qEX8mvrgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "imageLarge": "http://books.google.com/books/content?id=407qEX8mvrgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "categories": "Biography & Autobiography",
+      "isbn": "9781101614846, 1101614846",
       "numCopies": 5
     }
   ],
@@ -402,26 +450,119 @@
       "isbn": "NLI:1993907-20",
       "action": "Delete",
       "date": "29/05/2024, 15:36"
+    },
+    {
+      "id": "0e4c",
+      "bookName": "A Tale for Each Month, 1961",
+      "isbn": "UGA:32108006286721",
+      "action": "copy reduced",
+      "date": "29/05/2024, 18:30"
+    },
+    {
+      "id": "2e11",
+      "bookName": "The Cadet Life of Prince Harry",
+      "isbn": "9781434353924, 1434353923",
+      "action": "copy added",
+      "date": "29/05/2024, 18:37"
+    },
+    {
+      "id": "d59c",
+      "bookName": "A bilingual concordance to the Targum of the Prophets",
+      "isbn": "UOM:39015043811127",
+      "action": "copy added",
+      "date": "29/05/2024, 19:41"
+    },
+    {
+      "id": "4e87",
+      "bookName": "A Tale for Each Month, 1961",
+      "isbn": "UGA:32108006286721",
+      "action": "copy added",
+      "date": "29/05/2024, 19:41"
+    },
+    {
+      "id": "d1f3",
+      "bookName": "Melakhim A",
+      "isbn": "UTEXAS:059172143303744",
+      "action": "copy reduced",
+      "date": "29/05/2024, 19:46"
+    },
+    {
+      "id": "65df",
+      "bookName": "The Secrets of Love",
+      "isbn": "1853407747, 9781853407741",
+      "action": "Create",
+      "date": "29/05/2024, 19:54"
+    },
+    {
+      "id": "ad38",
+      "bookName": "Jony Ive",
+      "isbn": "9781101614846, 1101614846",
+      "action": "Create",
+      "date": "30/05/2024, 00:09"
+    },
+    {
+      "id": "22c9",
+      "bookName": "DreamWorks Shrek",
+      "isbn": "9781524767716, 1524767719",
+      "action": "copy reduced",
+      "date": "30/05/2024, 00:16"
+    },
+    {
+      "id": "8ca4",
+      "bookName": "XSS\"><img src=x onerror=alert('XSS')>",
+      "isbn": "555",
+      "action": "Delete",
+      "date": "30/05/2024, 00:29"
+    },
+    {
+      "id": "34fd",
+      "bookName": "test>",
+      "isbn": "34242>",
+      "action": "Delete",
+      "date": "30/05/2024, 00:29"
+    },
+    {
+      "id": "781d",
+      "bookName": "hjk",
+      "isbn": "556767",
+      "action": "Delete",
+      "date": "30/05/2024, 09:05"
+    },
+    {
+      "id": "4350",
+      "bookName": "The Great Gatsby",
+      "isbn": "9781471173943, 1471173941",
+      "action": "copy added",
+      "date": "30/05/2024, 09:59"
+    },
+    {
+      "id": "8968",
+      "bookName": "A bilingual concordance to the Targum of the Prophets",
+      "isbn": "UOM:39015043811127",
+      "action": "Delete",
+      "date": "30/05/2024, 10:00"
+    },
+    {
+      "id": "883c",
+      "bookName": "The Great Gatsby",
+      "isbn": "9781471173943, 1471173941",
+      "action": "Delete",
+      "date": "30/05/2024, 10:00"
+    },
+    {
+      "id": "762c",
+      "bookName": "ddd",
+      "isbn": "No isbn available",
+      "action": "Delete",
+      "date": "30/05/2024, 19:11"
     }
   ],
   "favorites": [
-    {
-      "id": "ed41",
-      "bookName": "The Great Gatsby",
-      "authorsName": "F. Scott Fitzgerald",
-      "imageSmall": "http://books.google.com/books/content?id=iWA-DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-    },
     {
       "id": "7404",
       "bookName": "Harry's War - The True Story of the Soldier Prince",
       "authorsName": "Robert Jobson",
       "imageSmall": "http://books.google.com/books/content?id=fzutDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-    },
-    {
-      "id": "bfc6",
-      "bookName": "Harry's Apology",
-      "authorsName": "David Martin Anderson",
-      "imageSmall": "http://books.google.com/books/content?id=KAXfDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
     },
     {
       "id": "2167",

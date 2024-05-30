@@ -16,7 +16,7 @@ body {
 header {
   background-color: #cad4eeb1;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 31px 20px;
   display: flex;
   font-family: "Forum", serif;
   font-weight: 600;
@@ -35,7 +35,7 @@ header {
 }
 
 nav {
-  padding-top: 0.35em;
+  padding-top: 0.37em;
 }
 
 nav ul {
@@ -93,7 +93,7 @@ main {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 10px;
   width: 95%;
-  display: flex;
+  display: none;
   justify-content: space-between;
   flex-wrap: wrap;
   align-self: center;
@@ -113,7 +113,8 @@ main {
   font-family: "Vollkorn", serif;
   font-optical-sizing: auto;
   font-weight: 700;
-  box-shadow: 0px 10px 1px rgba(221, 221, 221, 1), 0 10px 20px rgba(204, 204, 204, 1);
+  box-shadow: 0px 10px 1px rgba(221, 221, 221, 1),
+    0 10px 20px rgba(204, 204, 204, 1);
 }
 
 .book p {
@@ -149,6 +150,8 @@ main {
   opacity: 0;
   align-self: center;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 1em;
 }
 
@@ -182,6 +185,114 @@ main {
   font-optical-sizing: auto;
   font-style: normal;
 }
-#next,#previous {
+#next,
+#previous {
   cursor: pointer;
+}
+.manualAdd {
+  text-align: center;
+}
+.manualAdd a {
+  font-family: "Tinos", serif;
+  font-weight: 600;
+  font-style: italic;
+  text-decoration: none;
+  color: #0e3f72;
+}
+.manualAdd a:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Adjusting the padding and font size for the body */
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* Header styles */
+  header {
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 80px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.35em;
+  }
+
+  nav ul {
+    padding: 0;
+    display: flex;
+    gap: 1em;
+  }
+
+  nav ul li {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  nav input {
+    width: 80%;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* Main content styles */
+  main {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .search {
+    width: 100%;
+    gap: 1em;
+  }
+
+  .search input[type="search"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+
+  #books {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .book {
+    width: calc(50% - 1em);
+    margin: 0.5em;
+  }
+
+  .pagination {
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pagination button {
+    width: 100%;
+  }
+
+  #fetch-books-button {
+    width: 100%;
+  }
 }

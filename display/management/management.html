@@ -16,19 +16,21 @@
       rel="stylesheet"
     />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../home/loader.css">
+    <link rel="stylesheet" href="../home/loader.css" />
   </head>
   <body>
     <header>
       <div class="logo">
-        <a href="/display/home/index.html"> <img src="/display/images/openlibrary-logo-tighter.svg" alt="Logo" /></a>
+        <a href="/display/home/index.html">
+          <img src="/display/images/openlibrary-logo-tighter.svg" alt="Logo"
+        /></a>
       </div>
       <nav>
         <ul>
@@ -93,15 +95,22 @@
     </div>
     <main>
       <div class="search">
-        <input id="book-search" oninput="searchWithDebounce()" type="search" placeholder="Enter Book name" />
+        <input
+          id="book-search"
+          oninput="searchWithDebounce()"
+          type="search"
+          placeholder="Enter Book name"
+        />
       </div>
       <div id="books"></div>
       <div class="pagination">
-        <i id="previous" class="fa-solid fa-angles-left"></i>
-        <i id="next" class="fa-solid fa-angles-right"></i>
+        <div class="icons">
+          <i id="previous" class="fa-solid fa-angles-left"></i>
+          <i id="next" class="fa-solid fa-angles-right"></i>
+        </div>
+
         <div class="manualAdd">
-          <p>if you have not the book you asked for </p>
-          <a href="/display/management/manualAdd/index.html">Click me</a>
+          <a href="/display/management/manualAdd/index.html">Click to add if not in library</a>
         </div>
       </div>
     </main>

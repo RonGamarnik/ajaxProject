@@ -309,7 +309,7 @@ span {
 }
 #delete,
 #forward,
-#back {
+#back, #addToFav {
   cursor: pointer;
 }
 @media only screen and (max-width: 800px) {

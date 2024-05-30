@@ -130,7 +130,7 @@
       "imageLarge": "http://books.google.com/books/content?id=NtKIDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "categories": "Juvenile Fiction",
       "isbn": "9781524767716, 1524767719",
-      "numCopies": 5
+      "numCopies": 4
     },
     {
       "id": "1207",
@@ -523,6 +523,34 @@
       "isbn": "9781101614846, 1101614846",
       "action": "Create",
       "date": "30/05/2024, 00:09"
+    },
+    {
+      "id": "22c9",
+      "bookName": "DreamWorks Shrek",
+      "isbn": "9781524767716, 1524767719",
+      "action": "copy reduced",
+      "date": "30/05/2024, 00:16"
+    },
+    {
+      "id": "8ca4",
+      "bookName": "XSS\"><img src=x onerror=alert('XSS')>",
+      "isbn": "555",
+      "action": "Delete",
+      "date": "30/05/2024, 00:29"
+    },
+    {
+      "id": "34fd",
+      "bookName": "test>",
+      "isbn": "34242>",
+      "action": "Delete",
+      "date": "30/05/2024, 00:29"
+    },
+    {
+      "id": "781d",
+      "bookName": "hjk",
+      "isbn": "556767",
+      "action": "Delete",
+      "date": "30/05/2024, 09:05"
     }
   ],
   "favorites": [
@@ -539,22 +567,16 @@
       "imageSmall": "http://books.google.com/books/content?id=fzutDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
     },
     {
-      "id": "bfc6",
-      "bookName": "Harry's Apology",
-      "authorsName": "David Martin Anderson",
-      "imageSmall": "http://books.google.com/books/content?id=KAXfDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-    },
-    {
-      "id": "525c",
-      "bookName": "A Tale for Each Month, 1961",
-      "authorsName": "Dov Noy",
-      "imageSmall": "http://books.google.com/books/content?id=NmjNHmeJ808C&printsec=frontcover&img=1&zoom=5&source=gbs_api"
-    },
-    {
       "id": "2167",
       "bookName": "A Shaker's Answer to the Oft-repeated Question, \"What Would Become of the World If All Should Become Shakers?\"",
       "authorsName": "Richard W. Pelham",
       "imageSmall": "http://books.google.com/books/content?id=XA1CN22onEgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+    },
+    {
+      "id": "11f3",
+      "bookName": "Melakhim A",
+      "authorsName": "No authors available",
+      "imageSmall": "http://books.google.com/books/content?id=cglyWKzhPEMC&printsec=frontcover&img=1&zoom=5&source=gbs_api"
     }
   ]
 }
